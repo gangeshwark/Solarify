@@ -1,33 +1,33 @@
 from flask import Flask
 
-app = Flask(__name__)
+applicaion = Flask(__name__)
 
 
-@app.route('/')
+@applicaion.route('/')
 def hello_world():
     return 'Index Page'
 
 
-@app.route('/commercial')
+@applicaion.route('/commercial')
 def commercial():
     return 'Commercial page'
 
 
-@app.route('/residential')
+@applicaion.route('/residential')
 def residential():
     return 'Residential page'
 
 
-@app.route('/industrial')
+@applicaion.route('/industrial')
 def industrial():
     return 'Industrial page'
 
 
-@app.route('/calculate')
+@applicaion.route('/calculate')
 def calculate():
     result = '0'
     return 'result'
 
 
 if __name__ == '__main__':
-    app.run()
+    applicaion.run()
