@@ -1,0 +1,309 @@
+<html>
+<head>
+    <!-- Latest compiled and minified Jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified Jquery UI-->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Dosis|Droid+Sans|Lobster' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+
+</head>
+<body>
+
+<!--CONTAINER STARTS-->
+
+<!--HOME PAGE-->
+
+
+<div class="row  slide1 flow-text">
+    <!--NAVIGATION BAR-->
+    <div class="navbar-fixed">
+        <nav class=" expand">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo ">&nbsp;&nbsp;Solarify</a>
+                <ul class="right hide-on-med-and-down ">
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="{{ url_for('calculator') }}">Calculator</a></li>
+                    <li><a href="#!">Installer</a></li>
+                    <li><a href="#!">Learn Solar</a></li>
+                    <li><a href="#!">Blog</a></li>
+
+                </ul>
+                <ul id="slide-out" class="side-nav">
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Home</span></a></li>
+                    <li><a href="{{ url_for('calculator') }}"><span
+                            class="grey-text text-darken-3 ">Calculator</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Installer</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Learn Solar</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Blog</span></a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </nav>
+    </div>
+
+    <!--NAVIGATION BAR ENDS-->
+    <div class="container">
+        <div class="row page1">
+
+            <div class="col s8 offset-s2 center"><span
+                    style="color:#fff;">Utilize your rooftop for Power Gains<br>Be <span class="brand-logo"
+                                                                                         id="logo-hover">Solarified</span> today .</span>
+            </div>
+            <div class="col s2"></div>
+        </div>
+        <div class="row page2">
+
+            <div class="col s8 offset-s2 center"><span style="color:#fff;">Are you looking for <!-- Dropdown Trigger -->
+																  <a class='dropdown-button waves-effect waves-light btn red lighten-3'
+                                                                     href='#' data-activates='dropdown1'>Select One</a>
+
+																  <!-- Dropdown Structure -->
+																  <ul id='dropdown1' class='dropdown-content'>
+                                                                      <li><a href="#!" class="waves-effect waves-light"><span
+                                                                              class="red-text text-lighten-3 ">House</span></a>
+                                                                      </li>
+                                                                      <li><a href="#!" class="waves-effect waves-light"><span
+                                                                              class="red-text text-lighten-3 ">School</span></a>
+                                                                      </li>
+                                                                      <li><a href="#!" class="waves-effect waves-light"><span
+                                                                              class="red-text text-lighten-3 ">Hospital</span></a>
+                                                                      </li>
+                                                                      <li><a href="#!" class="waves-effect waves-light"><span
+                                                                              class="red-text text-lighten-3 ">Factory</span></a>
+                                                                      </li>
+                                                                      <li><a href="#!" class="waves-effect waves-light"><span
+                                                                              class="red-text text-lighten-3 ">Office</span></a>
+                                                                      </li>
+                                                                  </ul>
+															</span></div>
+            <div class="col s2"></div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--ABOUT PAGE-->
+<div class="row slide2 blue-grey lighten-3 flow-text">
+    <div class="row page3">
+
+        <div class="col s8 offset-s2 center"><span>Why <span class="brand-logo red-text text-lighten-1"
+                                                             style="font-size:37px;" id="logo-hover">Solarify</span> today</span><br><span
+                style="">Protect yourself from </span><span style="font-weight:700;">Utility Rates</span> & <span
+                style="font-weight:700;">Oil Price hikes</span></div>
+        <div class="col s2"></div>
+    </div>
+
+
+    <div class="row page32">
+
+        <div class="col s12 m4 center ">
+            <div class=" circle"><i class="fa fa-inr"></i></div>
+            <p class="page4-sec-out center">Cost</p>
+
+            <div class="col s10 offset-s1 ">
+                Solar:<a class="tooltipped page4-desc-li" data-position="top" data-delay="50"
+                         data-tooltip="I am the best !"> Rs. 2/unit</a><br>
+                Grid:<a class="tooltipped page4-desc-li" data-position="right" data-delay="50"
+                        data-tooltip="I am expensive !"> Rs. 20/unit</a><br>
+                Diesel:<a class="tooltipped page4-desc-li" data-position="bottom" data-delay="50"
+                          data-tooltip="I am expensive !"> Rs. 50/unit</a>
+            </div>
+        </div>
+
+        <div class="col s12 m4 center ">
+            <div class=" circle"><i class="fa fa-paw"></i></div>
+            <p class="page4-sec-out center">Returns</p>
+
+            <div class="row page4-desc">
+                <div class="col s10 offset-s1 ">
+                    Residence:<a class="tooltipped page4-desc-li" data-position="top" data-delay="50"
+                                 data-tooltip="I am the best !"> 30% p.a.</a><br>
+                    Office:<a class="tooltipped page4-desc-li" data-position="right" data-delay="50"
+                              data-tooltip="I am expensive !"> 40% p.a.</a><br>
+                    Factory:<a class="tooltipped page4-desc-li" data-position="bottom" data-delay="50"
+                               data-tooltip="I am expensive !"> 70% p.a.</a>
+                </div>
+                <div class="col s1 "></div>
+            </div>
+        </div>
+        <div class="col s12 m4 center ">
+            <div class=" circle"><i class="fa fa-diamond"></i></div>
+            <p class="page4-sec-out center">Benefits</p>
+
+            <div class="row page4-desc">
+                <div class="col s10 offset-s1 ">
+                    Residential:<a class="tooltipped page4-desc-li" data-position="top" data-delay="50"
+                                   data-tooltip="I am the best !"> 30% p.a.</a><br>
+                    Commercial:<a class="tooltipped page4-desc-li" data-position="right" data-delay="50"
+                                  data-tooltip="I am expensive !"> 80% p.a.</a><br>
+                    Factory:<a class="tooltipped page4-desc-li" data-position="bottom" data-delay="50"
+                               data-tooltip="I am expensive !"> 70% p.a.</a>
+                </div>
+                <div class="col s1 "></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row page5">
+
+        <div class="col s8 offset-s2 center"><span>Today solar is <span
+                style="font-weight:700;">Practical, Efficient</span> & <span style="font-weight:700;">Cheaper</span> solution to all your power needs.
+        </div>
+        <div class="col s2"></div>
+    </div>
+
+</div>
+<!--IMPACT PAGE-->
+<div class="row  slide3 teal flow-text">
+
+    <div class="row page6 blue-grey-text text-lighten-3">
+
+        <div class="col s8 offset-s2 center"><span>Impact of <span class="blue-grey-text text-lighten-3"
+                                                                   style="font-weight:800">Solar</span> power</span>
+        </div>
+        <div class="col s2"></div>
+    </div>
+
+    <div class="row page4">
+        <div class="col m4 s12">
+
+            <div class="card-panel  why-solar" id="why-solar-1">
+                <p class="white-text center title-impact">
+                    Environment
+
+                </p>
+            </div>
+        </div>
+        <div class="col m4 s12 ">
+
+            <div class="card-panel  why-solar" id="why-solar-2">
+                <p class="white-text center title-impact">
+                    Bills
+
+                </p>
+            </div>
+        </div>
+        <div class="col m4 s12">
+
+            <div class="card-panel  why-solar" id="why-solar-3">
+                <p class="white-text center title-impact">
+                    Power
+
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!--CALCULATOR PAGE-->
+<div class="row  slide4">
+
+</div>
+
+<!--FOOTER-->
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text brand-logo">Solarify</h5>
+
+                <p class="grey-text text-lighten-4">Practical, Efficient & Cheaper solution to all your power needs.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Drop us a line</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Solar 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Solar 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Solar 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Solar 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; 2015 <span class="brand-logo">Solarify</span>
+            <a class="grey-text text-lighten-4 right" href="#">Solar Designs</a>
+        </div>
+    </div>
+</footer>
+
+<!--CONTAINER ENDS-->
+</body>
+<script>
+    $(document).ready(function () {
+        //NAVBAR
+        $(".button-collapse").sideNav();
+        $('.dropdown-button').dropdown({
+                    inDuration: 300,
+                    outDuration: 225,
+                    constrain_width: true, // Does not change width of dropdown to that of the activator
+                    hover: false, // Activate on hover
+                    gutter: 0, // Spacing from edge
+                    belowOrigin: false // Displays dropdown below the button
+                }
+        );
+
+
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('nav').addClass('shrink');
+                $('nav').addClass('red lighten-3');
+
+                $('.lime-text').removeClass('nav-link');
+            } else {
+
+                $('nav').addClass('expand');
+                $('nav').removeClass('shrink');
+                $('nav').removeClass('red lighten-3');
+                $('.lime-text').addClass('nav-link');
+            }
+
+
+            if ($(document).scrollTop() > 1020) {
+                $('.why-solar').slideDown(1000);
+
+            } else {
+
+
+                $('.why-solar').slideUp(1000);
+            }
+        });
+
+
+    });
+    if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+    window.onmousewheel = document.onmousewheel = wheel;
+
+    function wheel(event) {
+        var delta = 0;
+        if (event.wheelDelta) delta = event.wheelDelta / 120;
+        else if (event.detail) delta = -event.detail / 3;
+
+        handle(delta);
+        if (event.preventDefault) event.preventDefault();
+        event.returnValue = false;
+    }
+
+    function handle(delta) {
+        var time = 1000;
+        var distance = 300;
+
+        $('html, body').stop().animate({
+            scrollTop: $(window).scrollTop() - (distance * delta)
+        }, time);
+    }
+</script>
+</html>

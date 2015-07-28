@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <!-- Latest compiled and minified Jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified Jquery UI-->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Dosis|Droid+Sans|Lobster' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../static/calc/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/calc/css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/calc/css/component.css"/>
+    <script src="../static/calc/js/modernizr.custom.js"></script>
+</head>
+<body>
+<div class="container-2">
+    <!--NAVIGATION BAR-->
+    <div class="navbar-fixed">
+        <nav class=" expand">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo ">&nbsp;&nbsp;Solarify</a>
+                <ul class="right hide-on-med-and-down ">
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!">Calculator</a></li>
+                    <li><a href="#!">Installer</a></li>
+                    <li><a href="#!">Learn Solar</a></li>
+                    <li><a href="#!">Blog</a></li>
+
+                </ul>
+                <ul id="slide-out" class="side-nav">
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Home</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Calculator</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Installer</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Learn Solar</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Blog</span></a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </nav>
+    </div>
+    <section>
+        <form id="theForm" class="simform" autocomplete="off">
+            <div class="simform-inner">
+                <ol class="questions">
+                    <li>
+                        <span><label for="q1">What's your roof top area?</label></span>
+                        <input id="q1" name="q1" type="number"/>
+                    </li>
+                    <li>
+                        <span><label for="q2">What's your monthly electricity bill?</label></span>
+                        <input id="q2" name="q2" type="number"/>
+                    </li>
+                    <li>
+                        <span><label for="q3">What's the sanctioned load by utility?</label></span>
+                        <input id="q3" name="q3" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q4">What type of connection you are looking for?</label></span>
+                        <input id="q4" name="q4" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q5">Which state are you in?</label></span>
+                        <input id="q5" name="q5" type="text"/>
+                    </li>
+                    <li>
+                        <span><label for="q6">What's your email address?</label></span>
+                        <input id="q6" name="q6" type="text"/>
+                    </li>
+                </ol>
+                <!-- /questions -->
+                <button class="submit" type="submit">Send answers</button>
+                <div class="controls">
+                    <button class="next"></button>
+                    <div class="progress"></div>
+							<span class="number">
+								<span class="number-current"></span>
+								<span class="number-total"></span>
+							</span>
+                    <span class="error-message"></span>
+                </div>
+                <!-- / controls -->
+            </div>
+            <!-- /simform-inner -->
+            <span class="final-message"></span>
+        </form>
+        <!-- /simform -->
+    </section>
+
+</div>
+<!-- /container -->
+<script src="../static/calc/js/classie.js"></script>
+<script src="../static/calc/js/stepsForm.js"></script>
+<script>
+    var theForm = document.getElementById('theForm');
+
+    new stepsForm(theForm, {
+        onSubmit: function (form) {
+            // hide form
+            classie.addClass(theForm.querySelector('.simform-inner'), 'hide');
+
+            /*
+             form.submit()
+             or
+             AJAX request (maybe show loading indicator while we don't have an answer..)
+             */
+
+            // let's just simulate something...
+            var messageEl = theForm.querySelector('.final-message');
+            messageEl.innerHTML = 'Awesome! You can save 30% on your bills.';
+            classie.addClass(messageEl, 'show');
+        }
+    });
+</script>
+</body>
+</html>

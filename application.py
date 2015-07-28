@@ -1,13 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 
 application = Flask(__name__)
 
 
-
-
 @application.route('/')
+@application.route('/index')
 def hello_world():
-    return 'Index Page'
+    return render_template('index.html')
 
 
 @application.route('/commercial')
@@ -31,5 +30,10 @@ def calculate():
     return 'result'
 
 
+@application.route('/calculator')
+def calculator():
+    return render_template('calc.html')
+
+
 if __name__ == '__main__':
-    application.run()
+    application.run(debug=True)
