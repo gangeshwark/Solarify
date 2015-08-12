@@ -116,7 +116,7 @@ def calculate():
             break
         else:
             sum1 += savings[i]
-    sum1 = sum1 - savings[i]
+    # sum1 = sum1 - savings[i]
     i = i - 1
 
     print(sum1, i)
