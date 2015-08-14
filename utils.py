@@ -1,7 +1,7 @@
 __author__ = 'Gangeshwar'
 
 
-def lt2a(cost):
+def lt2a(cost):  # done
     max1 = 81
     max2 = max1 + 280
     max3 = max2 + 540
@@ -30,6 +30,30 @@ def lt2a(cost):
 
 
 def lt2b(cost):
+    max_ = 1200
+    if cost >= max_:
+        cost = cost - max_
+        units = cost / 7.2
+        units += 200
+        return units
+    else:
+        units = cost / 6.0
+        return units
+
+
+def lt3(cost):  # done
+    max_ = 347.5
+    if cost >= max_:
+        cost = cost - max_
+        units = cost / 7.95
+        units += 50
+        return units
+    else:
+        units = cost / 6.95
+        return units
+
+
+def ht2a(cost):  # done
     max_ = 590000
     if cost >= max_:
         cost = cost - max_
@@ -41,17 +65,18 @@ def lt2b(cost):
         return units
 
 
-def lt3(cost):
-    return
-
-
-def ht2a(cost):
-    return
-
-
 def ht2b(cost):
-    return
+    max_ = 1510000
+    if cost >= max_:
+        cost = cost - max_
+        units = cost / 7.85
+        units += 200000
+        return units
+    else:
+        units = cost / 7.55
+        return units
 
 
 def ht4(cost):
-    return
+    units = cost / 5.5
+    return units

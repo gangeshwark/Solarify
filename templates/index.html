@@ -12,7 +12,9 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+
 </head>
 <body>
 
@@ -23,12 +25,13 @@
 
 <div class="row  slide1 flow-text">
     <!--NAVIGATION BAR-->
-    <div class="navbar-fixed">
+    <div class="navbar-fixed  ">
         <nav class=" expand">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo ">&nbsp;&nbsp;Solarify</a>
+            <div class="nav-wrapper ">
+                <a href="{{ url_for('index') }}" class="brand-logo ">&nbsp;&nbsp;<img src="/static/logo.png" alt="Logo" height="65"
+                                                                          width="102"></a>
                 <ul class="right hide-on-med-and-down ">
-                    <li><a href="#!">Home</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('calculator') }}">Calculator</a></li>
                     <li><a href="#!">Installer</a></li>
                     <li><a href="#!">Learn Solar</a></li>
@@ -36,7 +39,7 @@
 
                 </ul>
                 <ul id="slide-out" class="side-nav">
-                    <li><a href="#!"><span class="grey-text text-darken-3 ">Home</span></a></li>
+                    <li><a href="#"><span class="grey-text text-darken-3 ">Home</span></a></li>
                     <li><a href="{{ url_for('calculator') }}"><span
                             class="grey-text text-darken-3 ">Calculator</span></a></li>
                     <li><a href="#!"><span class="grey-text text-darken-3 ">Installer</span></a></li>
@@ -52,37 +55,30 @@
     <div class="container">
         <div class="row page1">
 
-            <div class="col s8 offset-s2 center"><span
-                    style="color:#fff;">Utilize your rooftop for Power Gains<br>Be <span class="brand-logo"
-                                                                                         id="logo-hover">Solarified</span> today .</span>
-            </div>
+            <div class="col s8 offset-s2 center"><span class="white-text" style="text-shadow: 2px 2px #000;">Utilize your rooftop for Power Gains<br>Be <span
+                    class="brand-logo" id="logo-hover">Solarified</span> today .</span></div>
             <div class="col s2"></div>
         </div>
         <div class="row page2">
 
-            <div class="col s8 offset-s2 center"><span style="color:#fff;">Are you looking for <!-- Dropdown Trigger -->
-																  <a class='dropdown-button waves-effect waves-light btn red lighten-3'
-                                                                     href='#' data-activates='dropdown1'>Select One</a>
+            <div class="col s8 offset-s2 center"><span style="color:#fff;text-shadow: 2px 2px #000;">Are you looking for <!-- Dropdown Trigger --></span>
+                <a class='dropdown-button waves-effect waves-light btn orange lighten-2' href='#'
+                   data-activates='dropdown1'>Select One</a>
 
-																  <!-- Dropdown Structure -->
-																  <ul id='dropdown1' class='dropdown-content'>
-                                                                      <li><a href="#!" class="waves-effect waves-light"><span
-                                                                              class="red-text text-lighten-3 ">House</span></a>
-                                                                      </li>
-                                                                      <li><a href="#!" class="waves-effect waves-light"><span
-                                                                              class="red-text text-lighten-3 ">School</span></a>
-                                                                      </li>
-                                                                      <li><a href="#!" class="waves-effect waves-light"><span
-                                                                              class="red-text text-lighten-3 ">Hospital</span></a>
-                                                                      </li>
-                                                                      <li><a href="#!" class="waves-effect waves-light"><span
-                                                                              class="red-text text-lighten-3 ">Factory</span></a>
-                                                                      </li>
-                                                                      <li><a href="#!" class="waves-effect waves-light"><span
-                                                                              class="red-text text-lighten-3 ">Office</span></a>
-                                                                      </li>
-                                                                  </ul>
-															</span></div>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="{{ url_for('residential') }}" class="waves-effect waves-light"><span
+                            class="orange-text text-lighten-2 ">House</span></a></li>
+                    <li><a href="{{ url_for('commercial') }}" class="waves-effect waves-light"><span
+                            class="orange-text text-lighten-2 ">School</span></a></li>
+                    <li><a href="{{ url_for('commercial') }}" class="waves-effect waves-light"><span
+                            class="orange-text text-lighten-2 ">Hospital</span></a></li>
+                    <li><a href="{{ url_for('industrial') }}" class="waves-effect waves-light"><span
+                            class="orange-text text-lighten-2 ">Factory</span></a></li>
+                    <li><a href="{{ url_for('commercial') }}" class="waves-effect waves-light"><span
+                            class="orange-text text-lighten-2 ">Office</span></a></li>
+                </ul>
+            </div>
             <div class="col s2"></div>
         </div>
     </div>
@@ -91,10 +87,10 @@
 </div>
 
 <!--ABOUT PAGE-->
-<div class="row slide2 blue-grey lighten-3 flow-text">
+<div class="row slide2 white flow-text">
     <div class="row page3">
 
-        <div class="col s8 offset-s2 center"><span>Why <span class="brand-logo red-text text-lighten-1"
+        <div class="col s8 offset-s2 center"><span>Why <span class="brand-logo orange-text text-lighten-2"
                                                              style="font-size:37px;" id="logo-hover">Solarify</span> today</span><br><span
                 style="">Protect yourself from </span><span style="font-weight:700;">Utility Rates</span> & <span
                 style="font-weight:700;">Oil Price hikes</span></div>
@@ -105,7 +101,7 @@
     <div class="row page32">
 
         <div class="col s12 m4 center ">
-            <div class=" circle"><i class="fa fa-inr"></i></div>
+            <div class="orange-text text-lighten-2 circle"><i class="fa fa-inr"></i></div>
             <p class="page4-sec-out center">Cost</p>
 
             <div class="col s10 offset-s1 ">
@@ -119,7 +115,7 @@
         </div>
 
         <div class="col s12 m4 center ">
-            <div class=" circle"><i class="fa fa-paw"></i></div>
+            <div class="orange-text text-lighten-2 circle"><i class="fa fa-paw"></i></div>
             <p class="page4-sec-out center">Returns</p>
 
             <div class="row page4-desc">
@@ -135,7 +131,7 @@
             </div>
         </div>
         <div class="col s12 m4 center ">
-            <div class=" circle"><i class="fa fa-diamond"></i></div>
+            <div class="orange-text text-lighten-2 circle"><i class="fa fa-diamond"></i></div>
             <p class="page4-sec-out center">Benefits</p>
 
             <div class="row page4-desc">
@@ -163,11 +159,11 @@
 
 </div>
 <!--IMPACT PAGE-->
-<div class="row  slide3 teal flow-text">
+<div class="row  slide3 light-blue lighten-5 flow-text">
 
-    <div class="row page6 blue-grey-text text-lighten-3">
+    <div class="row page6 grey-text text-darken-4 ">
 
-        <div class="col s8 offset-s2 center"><span>Impact of <span class="blue-grey-text text-lighten-3"
+        <div class="col s8 offset-s2 center"><span>Impact of <span class="orange-text text-lighten-2"
                                                                    style="font-weight:800">Solar</span> power</span>
         </div>
         <div class="col s2"></div>
@@ -208,10 +204,48 @@
 <!--CALCULATOR PAGE-->
 <div class="row  slide4">
 
+    <div class="row page6 grey-text text-darken-4 ">
+
+        <div class="col s8 offset-s2 center"><span><span class="orange-text text-lighten-2" style="font-weight:800">Tools</span> </span>
+        </div>
+        <div class="col s2"></div>
+    </div>
+
+    <div class="row page32">
+
+        <div class="col s12 m4 center ">
+            <div class="orange-text text-lighten-2 circle"><i class="fa fa-calculator"></i></div>
+            <p class="page42-sec-out center">Caculate your requirements and Savings</p>
+
+            <div class="row page4-desc ">
+                <a class="waves-effect waves-light btn">Calculate</a>
+            </div>
+        </div>
+
+        <div class="col s12 m4 center ">
+            <div class="orange-text text-lighten-2 circle"><i class="fa fa-file-text-o"></i></div>
+            <p class="page42-sec-out center">Get a Free Quote</p>
+
+            <div class="row page4-desc">
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Get Quote</a>
+
+                <div class="col s1 "></div>
+            </div>
+        </div>
+        <div class="col s12 m4 center ">
+            <div class="orange-text text-lighten-2 circle"><i class="fa fa-wrench"></i></div>
+            <p class="page42-sec-out center">Select a friendly reputed installer</p>
+
+            <div class="row page4-desc">
+                <a class="waves-effect waves-light btn">Calculate</a>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <!--FOOTER-->
-<footer class="page-footer">
+<footer class="page-footer orange lighten-1">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
@@ -219,14 +253,30 @@
 
                 <p class="grey-text text-lighten-4">Practical, Efficient & Cheaper solution to all your power needs.</p>
             </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Drop us a line</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Solar 1</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Solar 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Solar 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Solar 4</a></li>
-                </ul>
+            <div class="col l4 offset-l0 s12">
+                <h5 class="white-text">Want to know more?
+                    <br> We will call you.</h5>
+
+                <form class="col s12">
+
+                    <div class="input-field col s12">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">Name</label>
+                    </div>
+
+
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input id="phone" type="tel" class="validate">
+                        <label for="phone">Phone</label>
+                    </div>
+
+
+                </form>
             </div>
         </div>
     </div>
@@ -237,13 +287,45 @@
         </div>
     </div>
 </footer>
+<!--POPUP -->
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content orange lighten-1">
+        <h4><span class="white-text">Fill in the details</span></h4>
 
+        <form class="col s12">
+
+            <div class="input-field col s12">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">Name</label>
+            </div>
+
+
+            <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="phone" type="tel" class="validate">
+                <label for="phone">Phone</label>
+            </div>
+
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
 <!--CONTAINER ENDS-->
 </body>
 <script>
     $(document).ready(function () {
         //NAVBAR
         $(".button-collapse").sideNav();
+        $('select').material_select();
+        $('.modal-trigger').leanModal();
         $('.dropdown-button').dropdown({
                     inDuration: 300,
                     outDuration: 225,
@@ -258,14 +340,14 @@
         $(window).scroll(function () {
             if ($(document).scrollTop() > 50) {
                 $('nav').addClass('shrink');
-                $('nav').addClass('red lighten-3');
+                $('nav').addClass('orange lighten-2');
 
                 $('.lime-text').removeClass('nav-link');
             } else {
 
                 $('nav').addClass('expand');
                 $('nav').removeClass('shrink');
-                $('nav').removeClass('red lighten-3');
+                $('nav').removeClass('orange lighten-2');
                 $('.lime-text').addClass('nav-link');
             }
 

@@ -1,246 +1,414 @@
-* {
-    margin: 0px;
-    padding: 0px;
+*{
+	margin:0px;
+	padding:0px;
 }
-
-body {
-    font-family: 'Dosis', sans-serif;
-    -webkit-touch-callout: none;
+body{
+	font-family: 'Dosis', sans-serif;
+	-webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-
 /* Scroll Bar Style  */
 ::-webkit-scrollbar {
     width: 5px;
 }
-
+ 
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     -webkit-border-radius: 0px;
     border-radius: 0px;
 }
-
+ 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    background: rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
-
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(0, 0, 0, 0.4);
+	background: rgba(0,0,0,0.4); 
 }
-
 /*UNIVERSAL*/
-.rightAlign {
-    text-align: right;
+.rightAlign
+{
+	text-align:right;
 }
 
-nav {
-    transition: all 0.7s ease-in-out;
+nav{
+	transition: all 0.7s ease-in-out;
 }
-
-.brand-logo {
-    font-family: 'Lobster', cursive;
+.brand-logo{font-family: 'Lobster', cursive;}
+#brand-logo{line-height: 64px;font-family: 'Lobster', cursive;}
+.expand{
+	height:120px;
+	line-height:120px;
+	background-color:transparent;
+	box-shadow:none;
+	color:#fff;
 }
-
-.expand {
-    height: 120px;
-    line-height: 120px;
-    background-color: transparent;
-    box-shadow: none;
-    color: #fff;
+.expand ul a{font-size:25px !important;}
+.shrink{
+	height:70px ;
+	line-height:70px ;
+	color:#424242;
 }
-
-.expand ul a {
-    font-size: 25px !important;
+.shrink ul a{font-size:20px !important;}
+.nav-link{
+	
+	
 }
+.slide1{
+	background-image:url("assets/sa.jpg") ;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+	margin-top:0;
+	padding-top:0;
+	height: 750px;
 
-.shrink {
-    height: 70px;
-    line-height: 70px;
-    color: #424242;
+ 
+	
+	
+	
 }
+.slide41{
+	background-image:url("assets/sa3.jpg") ;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+	margin-top:0;
+	padding-top:0;
+	height: 750px;
 
-.shrink ul a {
-    font-size: 20px !important;
+ 
+	
+	
+	
 }
+.slide21{
+	background-image:url("assets/sa2.jpg") ;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	opacity:0.7;
+	background-size: cover;
+	margin-top:0;
+	padding-top:0;
+	height: 750px;
 
-.nav-link {
-
+ 
+	
+	
+	
 }
+.slide31{
+	background-image:url("assets/comm-Optimized.jpg") ;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	background-attachment: fixed;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+	margin-top:0;
+	padding-top:0;
+	height: 750px;
 
-.slide1 {
-    background-image: url("assets/birds-eye-downtown-city-skyscrapers-fog.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-
-    background-size: cover;
-    margin-top: 0;
-    padding-top: 0;
-    height: 750px;
-
+ 
+	
+	
+	
 }
-
 .row {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  }
+.page1{
+	margin-top:19%;
+	font-size:32px;
+	font-weight:500;
+	font-family: 'Droid Sans', sans-serif;
 }
-
-.page1 {
-    margin-top: 19%;
-    font-size: 32px;
-    font-weight: 500;
-    font-family: 'Droid Sans', sans-serif;
+.page1-cal{
+	margin-top:14%;
+	font-size:28px;
+	font-weight:500;
+	font-family: 'Droid Sans', sans-serif;
 }
-
-.page2 {
-    margin-top: 9%;
-    font-size: 29px;
-    font-weight: 500;
-    font-family: 'Dosis', sans-serif;
+.page41{
+	margin-top:13%;
+	font-size:32px;
+	font-weight:500;
+	font-family: 'Droid Sans', sans-serif;
 }
-
+.page31{
+	margin-top:14%;
+	font-size:32px;
+	font-weight:500;
+	font-family: 'Droid Sans', sans-serif;
+}
+.page2{
+	margin-top:9%;
+	font-size:29px;
+	font-weight:500;
+	font-family: 'Dosis', sans-serif;
+}
 .btn, .btn-large, .btn-flat {
-    text-transform: none;
-    font-size: 23px;
+	text-transform:none;
+	font-size:23px;
+}
+.slide2{
+	height: auto;
+	
 }
 
-.slide2 {
-    height: auto;
+.page3{
+	padding-top:4%;
+	font-size:32px;
+	font-weight:300;
+	font-family: 'Dosis', sans-serif;
+}	
+.page4-sec{
+	font-size:32px;
+	font-weight:500;
+	font-family: 'Droid Sans', sans-serif;
+	margin-top:3%;
 }
-
-.page3 {
-    padding-top: 4%;
-    font-size: 32px;
-    font-weight: 300;
-    font-family: 'Dosis', sans-serif;
+.page4-sec-out{
+	font-size:32px;
+	font-weight:800;
+	
+	margin-top:8%;
 }
-
-.page4-sec {
-    font-size: 32px;
-    font-weight: 500;
-    font-family: 'Droid Sans', sans-serif;
-    margin-top: 3%;
+.page42-sec-out{
+	font-size:24px;
+	font-weight:800;
+	
+	margin-top:8%;
 }
-
-.page4-sec-out {
-    font-size: 32px;
-    font-weight: 800;
-
-    margin-top: 8%;
-}
-
-.page4-desc {
-    font-size: 22px;
-    font-weight: 500;
-
-    margin-top: 3%;
-    margin-bottom: 5%;
-
-}
-
-.page4-desc-li {
-    color: #000;
-    text-decoration: none;
-    font-weight: 800;
-    cursor: pointer;
+.page4-desc{
+	font-size:22px;
+	font-weight:500;
+	
+	margin-top:3%;
+	margin-bottom:5%;
 
 }
-
-.page5 {
-    padding-top: 3%;
-    padding-bottom: 3%;
-    font-size: 28px;
-    font-weight: 300;
-    font-family: 'Dosis', sans-serif;
+.page4-desc-li{
+	color:#000;
+	text-decoration:none;
+	font-weight:800;
+	cursor:pointer;
+	
 }
-
-.slide3 {
-    height: auto;
-}
-
-.circle {
-    border-radius: 50%;
-    width: 100px;
+.page5{
+	padding-top:3%;
+	padding-bottom:3%;
+	font-size:28px;
+	font-weight:300;
+	font-family: 'Dosis', sans-serif;
+}	
+.slide3{
+	height: 550px;}
+	
+	.slide4{
+	height: auto;}
+	
+	
+	.circle{
+	border-radius: 50%;
+	width: 100px;
     height: 100px;
-    margin: 20px auto;
-    border: 1px solid #757575;
-    font-size: 32px;
-    font-weight: 900;
-    color: #ef5350;
-    padding: 7.5%;
-
+	margin:20px auto;
+	border: 1px solid #757575;
+	font-size:32px;
+	font-weight:900;
+	color:#ef5350;
+	padding:7.5%;
+	
 }
-
-.why-solar {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    height: 300px;
-    opacity: 0.7;
+.why-solar{
+	-webkit-filter: grayscale(100%); 
+	filter: grayscale(100%);
+	height:300px;
+	 opacity: 0.7;
 }
-
-#why-solar-1 {
-    background-image: url("assets/env.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-
-    background-size: cover;
+#why-solar-1{
+	background-image:url("assets/env.jpg") ;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
 }
-
-#why-solar-2 {
-    background-image: url("assets/bill.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-
-    background-size: cover;
+#why-solar-2{
+	background-image:url("assets/bill.jpg") ;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
 }
-
-#why-solar-3 {
-    background-image: url("assets/power.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-
-    background-size: cover;
+#why-solar-3{
+	background-image:url("assets/power.jpg") ;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
 }
-
-.page6 {
-    padding-top: 4%;
-    font-size: 32px;
-    font-weight: 300;
-    font-family: 'Dosis', sans-serif;
+.why-solar2{
+	-webkit-filter: grayscale(100%); 
+	filter: grayscale(100%);
+	height:340px;
+	 opacity: 0.7;
+	 background-attachment:fixed;
 }
-
-.slide4 {
+.why-solar22{
+	-webkit-filter: grayscale(100%); 
+	filter: grayscale(100%);
+	height:350px;
+	
 }
-
+.why-solar32{
+	-webkit-filter: grayscale(100%); 
+	filter: grayscale(100%);
+	height:370px;
+	
+}
+#why-solar-21{
+	background-image:url("assets/roof-Optimized.jpg") ;
+	background-repeat:no-repeat;
+	background-position:top;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+}
+#why-solar-22{
+	background-image:url("assets/tools-Optimized.jpg") ;
+	background-repeat:no-repeat;
+	background-position:right;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+}
+#why-solar-23{
+	background-image:url("assets/power2-Optimized.jpg") ;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+}
+#why-solar-211{
+	background-image:url("assets/H1.png") ;
+	background-repeat:no-repeat;
+	background-position:center;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+}
+#why-solar-222{
+	background-image:url("assets/H2.png") ;
+	background-repeat:no-repeat;
+	background-position:center;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+}
+#why-solar-233{
+	background-image:url("assets/H3.png") ;
+	background-repeat:no-repeat;
+	background-position:center;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+}
+#why-solar-311{
+	background-image:url("assets/O1.png") ;
+	background-repeat:no-repeat;
+	background-position:center;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+}
+#why-solar-322{
+	background-image:url("assets/O2.png") ;
+	background-repeat:no-repeat;
+	background-position:center;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+}
+#why-solar-333{
+	background-image:url("assets/O3.png") ;
+	background-repeat:no-repeat;
+	background-position:center;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	background-size: cover;
+}
+.page6{
+	padding-top:4%;
+	font-size:32px;
+	font-weight:300;
+	font-family: 'Dosis', sans-serif;
+}
+.slide4{}
 footer.page-footer {
-    margin-top: 0px;
-
+  margin-top: 0px;
+  
 }
 
-
-
-
+.input-field label {
+    color: #FFF !IMPORTANT;
+}
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff !important;
+}
 
 
 

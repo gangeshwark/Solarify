@@ -1,0 +1,458 @@
+<html>
+<head>
+    <!-- Latest compiled and minified Jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified Jquery UI-->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Dosis|Droid+Sans|Lobster' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+
+</head>
+<body>
+
+<!--CONTAINER STARTS-->
+
+<!--HOME PAGE-->
+
+
+<div class="row  slide2 flow-text">
+    <!--NAVIGATION BAR-->
+    <div class="navbar-fixed">
+        <nav class=" expand">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('index') }}" class="brand-logo ">&nbsp;&nbsp;Solarify</a>
+                <ul class="right hide-on-med-and-down ">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('calculator') }}">Calculator</a></li>
+                    <li><a href="#!">Installer</a></li>
+                    <li><a href="#!">Learn Solar</a></li>
+                    <li><a href="#!">Blog</a></li>
+                </ul>
+                <ul id="slide-out" class="side-nav">
+                    <li><a href="#"><span class="grey-text text-darken-3 ">Home</span></a></li>
+                    <li><a href="{{ url_for('calculator') }}"><span
+                            class="grey-text text-darken-3 ">Calculator</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Installer</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Learn Solar</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Blog</span></a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </nav>
+    </div>
+
+    <!--NAVIGATION BAR ENDS-->
+    <div class="container">
+        <div class="row page32">
+
+            <div class="col s12 m12">
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header">What is rooftop solar PV solutions?</div>
+                        <div class="collapsible-body">Photovoltaic system has electricity-generating solar panels
+                            mounted on the rooftop of a
+
+                            residential or commercial building or structure
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">How is it useful?</div>
+                        <div class="collapsible-body">It generates power at your own space by utilizing un-used roof
+                            space at a reasonable cost.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Why should you use it?</div>
+                        <div class="collapsible-body">Gain freedom from power cuts and exposure to unstable power
+                            pricing
+
+                            <br> Commit to a stable/reliable source of solar power
+
+                            <br> Added incentive of going green
+
+                            <br> Reduce dependency on grid power & diesel generators
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Benefits to local power economy?</div>
+                        <div class="collapsible-body">Photovoltaic roof-top installations at the tail-end of the grid
+                            can enhance grid-stability
+
+                            and reduce losses
+
+                            <br> Savings in land requirement and costs
+
+                            <br> Creation of value from under-utilized /unutilized rooftops
+
+                            <br> Good choice for distributed power generation system
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Key pre-requirements for rooftop solar setup</div>
+                        <div class="collapsible-body">Need a shadow free area on the rooftop
+
+                            <br> Even a small shadow could affect generation output on the entire string of panels
+
+                            <br> Approx 100-120 sqft is required for installing a 1kWp system
+
+                            <br> Ideally, the wiring b/w solar panel on the roof and inverter placed indoor shouldn&#8217;t
+                            be
+
+                            more than 20m to avoid DC losses
+
+                            <br> Inverter and meters should be placed at a conveniently accessible location indoors away
+
+                            from sun/rain
+
+                            <br> Batteries need to be placed separately indoors
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">How does weather and local conditions affect performance?</div>
+                        <div class="collapsible-body">Generation depends on local weather and other conditions like
+                            temperature etc
+
+                            <br> Most places in India have 300 days of good sunshine
+
+                            <br> Ideal temperature for maximum generation is 25`C
+
+                            <br> Dust on the panels will reduce generation. Hence it is advised to clean the panels once
+
+                            every week atleast
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="collapsible-header">Government requirements.</div>
+                        <div class="collapsible-body">For grid-tied systems, the local electrical authority will decide
+                            to allow the installation
+
+                            depending on the neighborhood transformer ability to take the load etc
+
+                            <br> Should be an existing consumer and regularly paying the bills
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Capital and operating costs.</div>
+                        <div class="collapsible-body">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th data-field="id">S.No</th>
+                                    <th data-field="name">Parameters</th>
+                                    <th data-field="price">Cost (Rs/kWp) in thousands</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Solar PV module</td>
+                                    <td>30-45</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Inverter</td>
+                                    <td>12-15</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Mounting Structure</td>
+                                    <td>8-10</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Junction Box</td>
+                                    <td>1-2</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Lightning Arrestor</td>
+                                    <td>0.5-1</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Earthing Strip</td>
+                                    <td>1-3</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Civil & Electrical Work</td>
+                                    <td>10-12</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Cables & Wires</td>
+                                    <td>2-3</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Engineering & Designing</td>
+                                    <td>4-5</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Transportation Cost</td>
+                                    <td>0.5-1</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Other misc. cost</td>
+                                    <td>1-3</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+
+                                    <td>70-100</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            This is a breakup of the total system cost for a 1kWp system without batteries. Final cost
+
+                            would depend on each installer.<BR>
+                            Solar usually is an upfront investment, maintenance is at a minimal.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">How to select an installer</div>
+                        <div class="collapsible-body">The cheapest quote might not necessarily provide the best quality
+                            of equipment and
+
+                            service.
+                            <BR>Solar systems are long term investment, hence selecting a good quality professional
+
+                            installer will reap benefits in the long term
+
+                            <BR> Look for past projects that the installers have done and market credibility
+
+                            <br> MNRE approved installers are the best bet
+
+                            <br> Ask for certified products only from the installers
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Different kinds of solutions available?</div>
+                        <div class="collapsible-body">Grid-tied: Here the solar energy generated during the day is
+                            immediately consumed by the
+
+                            electrical load without any storage. The system powers the load in conjunction with the Grid
+
+                            power. Any surplus power is fed back to the grid via the net meter for which you reduce your
+
+                            monthly bill or earn money from local EB depends on the local state policy
+
+                            It is NOT a backup and cannot be considered as a standalone power solution for the loads. It
+
+                            does NOT produce power during power failure as the inverter shuts down the system to stop
+
+                            sending power into the grid and avoids the risk of electrocuting utility personnel who are
+
+                            working to repair the grid.<br>
+
+                            Grid-interactive: This system is everything that a grid-tied system is and it works in
+                            conjunction
+
+                            with either a battery backup or diesel generator to support the load even during a power
+                            failure.
+
+                            Supports multiple input power sources.<br>
+
+                            Off-grid: This system does not work with the grid and is designed to work only with a
+                            battery
+
+                            backup or diesel generator in off-grid applications. It is a backup and a standalone power
+
+                            solution for the loads
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Different components of a rooftop solar system</div>
+                        <div class="collapsible-body">Solar PV panels : They work by converting sunlight into
+                            electricity. They do not use the heat
+
+                            from the sun, and in fact can see a reduction in power output in hot climates. The
+                            electricity
+
+                            generated by the PV panels is Direct Current (DC). <br>
+
+                            Mounting structures: To mount the panels on the rooftop. Design will depend on the type of
+
+                            roof. It should last the lifetime of the solar panels i.e 20-25 years<br>
+
+                            Inverters: converts Direct Current (DC) into Alternating Current (AC). Various types of
+                            inverters
+
+                            are available for various applications. Good inverters provide stable power output<br>
+
+                            Battery: If solar power is required to be stored for night time use when solar power is not
+
+                            available, backup is required<br>
+
+                            Charge controller: required to regulate the charging of batteries. Protects solar panels and
+
+                            batteries.<br>
+
+                            Cables, Switchgear and Fuses: required to connect panels to inverters, load and control flow
+                            of
+
+                            electricity
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Lifetime of appliances -min/max</div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>Stable power increases performance & lifetime of appliances</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Lifetime of appliances -min/max</div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>Stable power increases performance & lifetime of appliances</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Lifetime of appliances -min/max</div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>Stable power increases performance & lifetime of appliances</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Lifetime of appliances -min/max</div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>Environmentally beneficial way of generating power</li>
+                                <li>Contributes to green economy</li>
+                                <li>Zero emissions</li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<!--ABOUT PAGE-->
+
+<!--IMPACT PAGE-->
+
+<!--CALCULATOR PAGE-->
+
+
+<!--FOOTER-->
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text brand-logo">Solarify</h5>
+
+                <p class="grey-text text-lighten-4">Practical, Efficient & Cheaper solution to all your power needs.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Drop us a line</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Solar 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Solar 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Solar 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Solar 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; 2015 <span class="brand-logo">Solarify</span>
+            <a class="grey-text text-lighten-4 right" href="#">Solar Designs</a>
+        </div>
+    </div>
+</footer>
+
+<!--CONTAINER ENDS-->
+</body>
+<script>
+    $(document).ready(function () {
+        //NAVBAR
+        $(".button-collapse").sideNav();
+        $('.dropdown-button').dropdown({
+                    inDuration: 300,
+                    outDuration: 225,
+                    constrain_width: true, // Does not change width of dropdown to that of the activator
+                    hover: false, // Activate on hover
+                    gutter: 0, // Spacing from edge
+                    belowOrigin: false // Displays dropdown below the button
+                }
+        );
+
+
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('nav').addClass('shrink');
+                $('nav').addClass('red lighten-3');
+
+                $('.lime-text').removeClass('nav-link');
+            } else {
+
+                $('nav').addClass('expand');
+                $('nav').removeClass('shrink');
+                $('nav').removeClass('red lighten-3');
+                $('.lime-text').addClass('nav-link');
+            }
+
+
+            if ($(document).scrollTop() > 1020) {
+                $('.why-solar').slideDown(1000);
+
+            } else {
+
+
+                $('.why-solar').slideUp(1000);
+            }
+        });
+
+
+    });
+    if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+    window.onmousewheel = document.onmousewheel = wheel;
+
+    function wheel(event) {
+        var delta = 0;
+        if (event.wheelDelta) delta = event.wheelDelta / 120;
+        else if (event.detail) delta = -event.detail / 3;
+
+        handle(delta);
+        if (event.preventDefault) event.preventDefault();
+        event.returnValue = false;
+    }
+
+    function handle(delta) {
+        var time = 1000;
+        var distance = 300;
+
+        $('html, body').stop().animate({
+            scrollTop: $(window).scrollTop() - (distance * delta)
+        }, time);
+    }
+</script>
+</html>

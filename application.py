@@ -1,82 +1,86 @@
 from flask import Flask, render_template, jsonify
 import math
 import numpy
-from utils import lt2b, lt2a, lt3, ht4, ht2b, ht2a
+from utils import lt2a, lt3, ht2b, ht2a, ht4
 
 application = Flask(__name__)
 
 
-@application.route('/')
 @application.route('/index')
-def hello_world():
+@application.route('/')
+def index():
     return render_template('index.html')
 
 
 @application.route('/commercial')
 def commercial():
-    return 'Commercial page'
+    return render_template('commercial.html')
 
 
 @application.route('/residential')
 def residential():
-    return 'Residential page'
+    return render_template('residential.html')
 
 
 @application.route('/industrial')
 def industrial():
-    return 'Industrial page'
+    return render_template('industrial.html')
 
 
-# , methods=['POST']
-@application.route('/calculate')
+@application.route('/faq')
+def faq():
+    return render_template('faq.html')
+
+
+@application.route('/calculate', methods=['POST'])
 def calculate():
     customer_type = 'R'  # residentaial-> R, commercial-> C, industrial -> I
     connection_type = 'LT'  # LT, HT
-    rooftop_area = 2000  # sqft
+    rooftop_area = 200  # sqft
     # rooftop_type = 0  # 450
     # monthly_bill = 623000  # Rs.
-    monthly_bill = 10000  # Rs.
+    monthly_bill = 1000  # Rs.
     sanction_load = 3  # kVA
     if (customer_type == 'R') & (connection_type == 'LT'):  # Residential and LT
-        result = lt2a(monthly_bill)
-        sys_type = 'grid-tie'
+        total_units = lt2a(monthly_bill)
+        sys_type = 'Grid-tie'
 
     elif (customer_type == 'C') & (connection_type == 'LT'):  # Commercial & LT
-        result = lt3(monthly_bill)
-        sys_type = 'grid-tie'
+        total_units = lt3(monthly_bill)
+        sys_type = 'Grid-tie'
 
     elif (customer_type == 'I') & (connection_type == 'LT'):  # Industrial & LT
-        result = lt3(monthly_bill)
-        sys_type = 'grid-interactive'
+        total_units = lt3(monthly_bill)
+        sys_type = 'Grid-interactive'
 
     elif (customer_type == 'R') & (connection_type == 'HT'):  # Residential and HT
-        result = ht4(monthly_bill)
-        sys_type = 'grid-tie'
+        total_units = ht4(monthly_bill)
+        sys_type = 'Grid-tie'
 
     elif (customer_type == 'C') & (connection_type == 'HT'):  # Commercial & HT
-        result = ht2b(monthly_bill)
-        sys_type = 'grid-interactive'
+        total_units = ht2b(monthly_bill)
+        sys_type = 'Grid-interactive'
 
     elif (customer_type == 'I') & (connection_type == 'HT'):  # Industrial & HT
-        result = ht2a(monthly_bill)
-        sys_type = 'grid-interactive'
+        total_units = ht2a(monthly_bill)
+        sys_type = 'Grid-interactive'
 
     elif (customer_type == 'R') & (connection_type == 0):  # Residential and -
-        result = lt2a(monthly_bill)
-        sys_type = 'grid-tie'
+        total_units = lt2a(monthly_bill)
+        sys_type = 'Grid-tie'
 
     elif (customer_type == 'C') & (connection_type == 0):  # Commercial & -
-        result = lt3(monthly_bill)
-        sys_type = 'grid-tie'
+        total_units = lt3(monthly_bill)
+        sys_type = 'Grid-tie'
 
     elif (customer_type == 'I') & (connection_type == 0):  # Industrial & -
-        result = ht2a(monthly_bill)
-        sys_type = 'grid-interactive'
+        total_units = ht2a(monthly_bill)
+        sys_type = 'Grid-interactive'
 
     else:
         return jsonify(response="Wrong Info!")
 
-    size_of_rooftop_sys = ((result / 5) / 30)
+    size_of_rooftop_sys = ((total_units / 5) / 30)
 
     if size_of_rooftop_sys <= (rooftop_area / 100):
         system_size = math.ceil(
@@ -92,7 +96,7 @@ def calculate():
 
     units_prod_year = system_size * 5 * 300  # produced from solar
 
-    units_used_year = result * 12  # from grid
+    units_used_year = total_units * 12  # from grid
 
     net_units_consumed = units_used_year - units_prod_year
 
@@ -116,10 +120,14 @@ def calculate():
             break
         else:
             sum1 += savings[i]
-    # sum1 = sum1 - savings[i]
+
+    sum2 = sum1
+    sum1 = sum1 - savings[i]
     i = i - 1
 
-    print(sum1, i)
+    months = (total_cost - sum1) / savings[i + 1]
+    roi = math.ceil((i + months) * 10) / 10.0
+    print(sum1, sum2, i, roi)
     savings_irr = []
     for j in range(i + 2):
         savings_irr.append(savings[j])
@@ -127,14 +135,18 @@ def calculate():
     print(yearly_bills)
     print(savings)
     print(savings_irr)
-    # savings.pop(1)
-    # savings.insert(1, 0)
-    # print(savings)
+    average_savings = 0
+    for i in range(1, 11):
+        # print(i)
+        average_savings += savings[i]
+
+    average_savings = average_savings / 10
+
     irr = round((numpy.irr(savings_irr) * 100.0), 2)
     print(irr)
 
-    res = {
-        'result': result,
+    temp = {
+        'total_units': total_units,
         'sys_type': sys_type,
         'size_of_rooftop_sys': size_of_rooftop_sys,
         'system_size': system_size,
@@ -142,17 +154,25 @@ def calculate():
         'units_prod_year': units_prod_year,
         'units_used_year': units_used_year,
         'net_units_consumed': net_units_consumed,
-        'irr': irr
+        'irr': irr,
+        'roi': roi,
+        'average_savings': average_savings
     }
-    # response = json.dump({'result': result, 'sys_type': sys_type, 'size_of_rooftop_sys': size_of_rooftop_sys, 'system_size': system_size, 'total_cost': total_cost}, 200)
+
+    res = {
+        'system_size': system_size,
+        'sys_type': sys_type,
+        'total_cost': total_cost,
+        'irr': irr,
+        'roi': roi,
+        'average_savings': average_savings
+    }
     return jsonify(response=res)
-    # return render_template('result.html', result=result, sys_type=sys_type, size_of_rooftop_sys=size_of_rooftop_sys,
-    # system_size=system_size, total_cost=total_cost)
 
 
 @application.route('/calculator')
 def calculator():
-    return render_template('calc.html')
+    return render_template('calculator.html')
 
 
 if __name__ == '__main__':
