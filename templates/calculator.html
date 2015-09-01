@@ -52,93 +52,111 @@
 
     <!--NAVIGATION BAR ENDS-->
     <div class="container">
-        <form action="{{ url_for('calculate') }}" method="POST"></form>
+
         <div class="row page1-cal">
+            <form action="{{ url_for('calculate') }}" method="POST" accept-charset="UTF-8"
+                  enctype="application/x-www-form-urlencoded">
+                {% if error %}
+                    <p class=error><strong>Error:</strong> {{ error }}
+                {% endif %}
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="col s8 offset-s2 center" id="set-1">
+                                <p class="white-text">
+                                    <strong>Error: </strong>{{ message }}
+                                </p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <div class="col s8 offset-s2 center" id="set-1">
+                    <p class="white-text" style="text-shadow: 2px 2px #000;">
+                        Which City are you from?
+                    </p>
 
-            <div class="col s8 offset-s2 center" id="set-1">
-                <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    Which City are you from?
-                </p>
-
-                <div class="input-field col s12">
-                    <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="Bangalore">Bangalore</option>
+                    <div class="input-field col s12">
+                        <select name="city" id="city">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="Bangalore">Bangalore</option>
 
 
-                    </select>
-                    <label>Select One</label>
+                        </select>
+                        <label>Select One</label>
+                    </div>
+                    <p class="white-text" style="text-shadow: 2px 2px #000;">
+                        What kind of customer are you?
+
+                    </p>
+
+                    <div class="input-field col s12">
+                        <select name="cust_type" id="cust_type">
+                            <option value="R" disabled selected>Choose your option</option>
+                            <option value="R">Residential</option>
+                            <option value="C">Commercial</option>
+                            <option value="I">Industrial</option>
+                        </select>
+                        <label>Select One</label>
+                    </div>
+
+                    <a class="waves-effect waves-light btn" id="button-1">Next</a>
                 </div>
-                <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What kind of customer are you?
 
-                </p>
 
-                <div class="input-field col s12">
-                    <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="R">Residential</option>
-                        <option value="C">Commercial</option>
-                        <option value="I">Industrial</option>
-                    </select>
-                    <label>Select One</label>
+                <div class="col s8 offset-s2 center" id="set-2">
+                    <p class="white-text" style="text-shadow: 2px 2px #000;">
+                        What is your rooftop area?
+
+                    </p>
+
+                    <div class="input-field col s12">
+                        <input name="area" id="area" type="number" class="validate">
+                        <label for="area">Not Less than 100 Sq Ft</label>
+                    </div>
+                    <p class="white-text" style="text-shadow: 2px 2px #000;">
+                        What kind of connection you have?
+
+                    </p>
+
+                    <div class="input-field col s12">
+                        <select id="conn_type" name="conn_type">
+                            <option value="LT" disabled selected>Choose your option</option>
+                            <option value="HT">HT</option>
+                            <option value="LT">LT</option>
+
+                        </select>
+
+                        <label>Select One</label>
+                    </div>
+                    <a class="waves-effect waves-light btn" id="button-2">Next</a>
                 </div>
 
-                <a class="waves-effect waves-light btn" id="button-1">Next</a>
-            </div>
 
+                <div class="col s8 offset-s2 center" id="set-3">
+                    <p class="white-text" style="text-shadow: 2px 2px #000;">
+                        What is your typical monthly bill?
 
-            <div class="col s8 offset-s2 center" id="set-2">
-                <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What is your rooftop area?
+                    </p>
 
-                </p>
+                    <div class="input-field col s12">
+                        <input name="bill" id="bill" type="number" class="validate">
+                        <label for="bill">Not Less than Rs. 300</label>
+                    </div>
+                    <p class="white-text" style="text-shadow: 2px 2px #000;">
+                        What is your sanctioned load?
 
-                <div class="input-field col s12">
-                    <input id="area" type="number" class="validate">
-                    <label for="area">Not Less than 100 Sq Ft</label>
+                    </p>
+
+                    <div class="input-field col s12">
+                        <input name="load" id="load" type="number" class="validate">
+                        <label for="load">Not Less than 1 KVA</label>
+                    </div>
+                    <button type="submit" class="waves-effect waves-light btn" id="button-3">Submit</button>
                 </div>
-                <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What kind of connection you have?
-
-                </p>
-
-                <div class="input-field col s12">
-                    <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="HT">HT</option>
-                        <option value="LT">LT</option>
-
-                    </select>
-                    <label>Select One</label>
-                </div>
-                <a class="waves-effect waves-light btn" id="button-2">Next</a>
-            </div>
-
-
-            <div class="col s8 offset-s2 center" id="set-3">
-                <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What is your typical monthly bill?
-
-                </p>
-
-                <div class="input-field col s12">
-                    <input id="bill" type="number" class="validate">
-                    <label for="bill">Not Less than Rs. 300</label>
-                </div>
-                <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What is your sanctioned load?
-
-                </p>
-
-                <div class="input-field col s12">
-                    <input id="load" type="number" class="validate">
-                    <label for="load">Not Less than 1 KVA</label>
-                </div>
-                <a class="waves-effect waves-light btn" id="button-3">Submit</a>
-            </div>
-            <div class="col s2"></div>
+                <div class="col s2"></div>
+            </form>
         </div>
+
 
     </div>
 
@@ -158,24 +176,24 @@
                 <h5 class="white-text">Want to know more?
                     <br> We will call you.</h5>
 
-                <form class="col s12">
+                <form class="col s12 red-text lighten-1-text" method="POST" style="margin-top:4%;"
+                      action="{{ url_for('contact') }}">
 
                     <div class="input-field col s12">
-                        <input id="first_name" type="text" class="validate">
+                        <input name="name" id="first_name" type="text" class="validate">
                         <label for="first_name">Name</label>
                     </div>
 
-
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
+                        <input name="email" id="email" type="email" class="validate">
                         <label for="email">Email</label>
                     </div>
 
                     <div class="input-field col s12">
-                        <input id="phone" type="tel" class="validate">
+                        <input name="phone" id="phone" type="tel" class="validate">
                         <label for="phone">Phone</label>
                     </div>
-
+                    <button type="submit" class="waves-effect waves-light btn">Submit</button>
 
                 </form>
             </div>

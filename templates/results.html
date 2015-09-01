@@ -12,7 +12,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
 
 
 </head>
@@ -28,7 +28,7 @@
     <div class="navbar-fixed  ">
         <nav class=" expand">
             <div class="nav-wrapper ">
-                <a href="index.html" class="brand-logo ">&nbsp;&nbsp;<img src="logo.png" alt="Logo" height="65"
+                <a href="index.html" class="brand-logo ">&nbsp;&nbsp;<img src="/static/logo.png" alt="Logo" height="65"
                                                                           width="102"></a>
                 <ul class="right hide-on-med-and-down ">
                     <li><a href="#!">Home</a></li>
@@ -56,86 +56,30 @@
 
             <div class="col s8 offset-s2 center" id="set-1">
                 <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    Which City are you from?
-
+                    <strong>System Size: </strong>{{ result.system_size }}
                 </p>
 
-                <div class="input-field col s12">
-                    <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="Bangalore">Bangalore</option>
-
-
-                    </select>
-                    <label>Select One</label>
-                </div>
                 <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What kind of customer are you?
-
+                    <strong>System Type: </strong>{{ result.sys_type }}
                 </p>
 
-                <div class="input-field col s12">
-                    <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="R">Residential</option>
-                        <option value="C">Commercial</option>
-                        <option value="I">Industrial</option>
-                    </select>
-                    <label>Select One</label>
-                </div>
-
-                <a class="waves-effect waves-light btn" id="button-1">Next</a>
-            </div>
-
-
-            <div class="col s8 offset-s2 center" id="set-2">
                 <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What is your rooftop area?
-
+                    <strong>Total cost of the system: </strong>{{ result.total_cost }}
                 </p>
 
-                <div class="input-field col s12">
-                    <input id="area" type="number" class="validate">
-                    <label for="area">Not Less than 100 Sq Ft</label>
-                </div>
                 <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What kind of connection you have?
-
+                    <strong>ROI: </strong>{{ result.roi }}
                 </p>
 
-                <div class="input-field col s12">
-                    <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="HT">HT</option>
-                        <option value="LT">LT</option>
-
-                    </select>
-                    <label>Select One</label>
-                </div>
-                <a class="waves-effect waves-light btn" id="button-2">Next</a>
-            </div>
-
-
-            <div class="col s8 offset-s2 center" id="set-3">
                 <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What is your typical monthly bill?
-
+                    <strong>IRR: </strong>{{ result.irr }}
                 </p>
 
-                <div class="input-field col s12">
-                    <input id="bill" type="number" class="validate">
-                    <label for="bill">Not Less than Rs. 300</label>
-                </div>
                 <p class="white-text" style="text-shadow: 2px 2px #000;">
-                    What is your sanctioned load?
-
+                    <strong>Average Savings: </strong>{{ result.average_savings }}
                 </p>
 
-                <div class="input-field col s12">
-                    <input id="load" type="number" class="validate">
-                    <label for="load">Not Less than 1 KVA</label>
-                </div>
-                <a class="waves-effect waves-light btn" id="button-3">Submit</a>
+
             </div>
             <div class="col s2"></div>
         </div>

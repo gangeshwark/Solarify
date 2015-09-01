@@ -338,26 +338,24 @@
         <h5 class="white-text">Want to know more?
             <br> We will call you.</h5>
 
-        <form class="col s12">
+        <form class="col s12 red-text lighten-1-text" method="POST" style="margin-top:4%;"
+              action="{{ url_for('contact') }}">
 
             <div class="input-field col s12">
-                <input id="first_name" type="text" class="validate">
+                <input name="name" id="first_name" type="text" class="validate">
                 <label for="first_name">Name</label>
             </div>
 
-
             <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
+                <input name="email" id="email" type="email" class="validate">
                 <label for="email">Email</label>
             </div>
 
             <div class="input-field col s12">
-                <input id="phone" type="tel" class="validate">
+                <input name="phone" id="phone" type="tel" class="validate">
                 <label for="phone">Phone</label>
             </div>
-
-            <a class="waves-effect waves-light btn">Submit</a>
-
+            <button type="submit" class="waves-effect waves-light btn">Submit</button>
 
         </form>
     </div>
@@ -376,30 +374,29 @@
     <div class="modal-content red lighten-1">
         <h4><span class="white-text">Fill in the details</span></h4>
 
-        <form class="col s12 red-text lighten-1-text" style="margin-top:4%;">
+        <form class="col s12 red-text lighten-1-text" method="POST" style="margin-top:4%;"
+              action="{{ url_for('contact') }}">
 
             <div class="input-field col s12">
-                <input id="first_name" type="text" class="validate">
+                <input name="name" id="first_name" type="text" class="validate">
                 <label for="first_name">Name</label>
             </div>
 
-
             <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
+                <input name="email" id="email" type="email" class="validate">
                 <label for="email">Email</label>
             </div>
 
             <div class="input-field col s12">
-                <input id="phone" type="tel" class="validate">
+                <input name="phone" id="phone" type="tel" class="validate">
                 <label for="phone">Phone</label>
             </div>
-
+            <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">Submit
+            </button>
 
         </form>
     </div>
-    <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
-    </div>
+
 </div>
 <!--CONTAINER ENDS-->
 </body>
