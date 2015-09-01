@@ -1,6 +1,5 @@
 import math
 import os
-import sys
 
 from flask import Flask, render_template, jsonify, request, flash, url_for, redirect
 import numpy
@@ -13,19 +12,16 @@ from boto import sns
 from utils import lt2a, lt3, ht2b, ht2a, ht4
 
 application = Flask(__name__)
-AWS_REGION = 'us-east-1'
-CONTACT_TABLE = 'NewContactTable'
-NEW_CONTACT_TOPIC = 'contact_info'
 
-FLASK_DEBUG = 'True' if os.environ.get('FLASK_DEBUG') is None else os.environ.get('FLASK_DEBUG')
 application.secret_key = 'this is secret of solrify!! :P !!'
 
-# Load boto.cfg values specified above
+# Load config values specified above
 application.config.from_object(__name__)
 
-# Load configuration vals from a file
-# application.boto.cfg.from_envvar('APP_CONFIG', silent=True)
+# Load configuration values from a file
+application.config.from_envvar('APP_CONFIG', silent=True)
 
+FLASK_DEBUG = 'True' if os.environ.get('FLASK_DEBUG') is None else os.environ.get('FLASK_DEBUG')
 
 # Connect to DynamoDB and get ref to Table
 ddb_conn = dynamodb2.connect_to_region(application.config['AWS_REGION'])
@@ -394,12 +390,11 @@ def contact():
         contact_data[item] = request.form[item]
 
     try:
-        publish_to_sns(body, email)
         store_in_dynamo(contact_data)
-    except ConditionalCheckFailedException:
-        print("Mail not sent")
+        publish_to_sns(body, email)
+    except ConditionalCheckFailedException as ex:
+        print("Mail not sent : " + ex.message)
         return redirect(url_for('index'))
-
     return render_template('index.html')
 
 
@@ -411,13 +406,15 @@ def store_in_dynamo(signup_data):
 
 def publish_to_sns(body, email):
     try:
+        sns_conn.add_permission(application.config['NEW_CONTACT_TOPIC'], "permission")
         sns_conn.publish(application.config['NEW_CONTACT_TOPIC'], body,
                          "New Contact: %s" % email)
         print("Mail Sent")
     except Exception as ex:
-        sys.stderr.write("Error publishing subscription message to SNS: %s" % ex.message)
-        print("Mail Not Sent")
+        print("Error publishing subscription message to SNS: %s" % ex.message)
+        print(ex)
+        print("Mail Not Sent!")
 
 
 if __name__ == '__main__':
-    application.run(debug=FLASK_DEBUG)
+    application.run(host='0.0.0.0', debug=FLASK_DEBUG)
