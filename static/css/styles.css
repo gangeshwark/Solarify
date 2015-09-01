@@ -91,7 +91,7 @@ nav{
 	background-size: cover;
 	margin-top:0;
 	padding-top:0;
-	height: 750px;
+	height: 630px;
 
  
 	
@@ -105,11 +105,12 @@ nav{
 	
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	opacity:0.7;
+
 	background-size: cover;
 	margin-top:0;
+
 	padding-top:0;
-	height: 750px;
+	height: 650px;
 
  
 	
@@ -117,7 +118,7 @@ nav{
 	
 }
 .slide31{
-	background-image:url("assets/comm-Optimized.jpg") ;
+	background-image: url("assets/comm.jpg");
 	background-repeat:no-repeat;
 	background-position:bottom;
 	background-attachment: fixed;
@@ -146,6 +147,13 @@ nav{
 	font-weight:500;
 	font-family: 'Droid Sans', sans-serif;
 }
+
+.page1-res {
+	margin-top: 14%;
+	font-size: 32px;
+	font-weight: 500;
+	font-family: 'Droid Sans', sans-serif;
+}
 .page1-cal{
 	margin-top:14%;
 	font-size:28px;
@@ -170,6 +178,13 @@ nav{
 	font-weight:500;
 	font-family: 'Dosis', sans-serif;
 }
+
+.page2-res {
+	margin-top: 9%;
+	font-size: 29px;
+	font-weight: 500;
+	font-family: 'Dosis', sans-serif;
+}
 .btn, .btn-large, .btn-flat {
 	text-transform:none;
 	font-size:23px;
@@ -180,10 +195,11 @@ nav{
 }
 
 .page3{
-	padding-top:4%;
+	padding-top: 1%;
 	font-size:32px;
 	font-weight:300;
 	font-family: 'Dosis', sans-serif;
+	margin-bottom: 2%;
 }	
 .page4-sec{
 	font-size:32px;
@@ -218,15 +234,24 @@ nav{
 	cursor:pointer;
 	
 }
+
+.page4-5 {
+	padding-top: 0%;
+	padding-bottom: 0%;
+	font-size: 28px;
+	margin-top: 3%;
+	font-family: 'Dosis', sans-serif;
+}
 .page5{
-	padding-top:3%;
+	padding-top: 1%;
 	padding-bottom:3%;
 	font-size:28px;
 	font-weight:300;
 	font-family: 'Dosis', sans-serif;
 }	
 .slide3{
-	height: 550px;}
+	height: auto;
+}
 	
 	.slide4{
 	height: auto;}
@@ -245,119 +270,145 @@ nav{
 	
 }
 .why-solar{
-	-webkit-filter: grayscale(100%); 
-	filter: grayscale(100%);
-	height:300px;
-	 opacity: 0.7;
+
+	height: 370px;
+	 
 }
 #why-solar-1{
-	background-image:url("assets/env.jpg") ;
+	background-image: url("assets/1.PNG");
 	background-repeat:no-repeat;
-	background-position:bottom;
+	background-position: CENTER;
 	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	
-	background-size: cover;
 }
 #why-solar-2{
-	background-image:url("assets/bill.jpg") ;
+	background-image: url("assets/2.PNG");
 	background-repeat:no-repeat;
-	background-position:bottom;
+	background-position: center;
 	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	
-	background-size: cover;
 }
 #why-solar-3{
-	background-image:url("assets/power.jpg") ;
+	background-image: url("assets/3.PNG");
 	background-repeat:no-repeat;
-	background-position:bottom;
+	background-position: center;
 	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	
-	background-size: cover;
 }
+
 .why-solar2{
-	-webkit-filter: grayscale(100%); 
-	filter: grayscale(100%);
+/ / -webkit-filter : grayscale(100 %);
+/ / filter : grayscale(100 %);
 	height:340px;
-	 opacity: 0.7;
-	 background-attachment:fixed;
+	padding-left: 43px;
+
+/ / opacity : 0.7;
+/ / background-attachment : fixed;
 }
 .why-solar22{
-	-webkit-filter: grayscale(100%); 
-	filter: grayscale(100%);
-	height:350px;
+
+	height: 470px;
+	cursor: pointer;
 	
 }
+
 .why-solar32{
 	-webkit-filter: grayscale(100%); 
 	filter: grayscale(100%);
 	height:370px;
-	
+
 }
 #why-solar-21{
-	background-image:url("assets/roof-Optimized.jpg") ;
+	background-image: url("assets/4.png");
 	background-repeat:no-repeat;
-	background-position:top;
+	background-position: center;
 	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	
-	background-size: cover;
 }
 #why-solar-22{
-	background-image:url("assets/tools-Optimized.jpg") ;
+	background-image: url("assets/5.png");
 	background-repeat:no-repeat;
-	background-position:right;
+	background-position: center;
 	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	
-	background-size: cover;
 }
 #why-solar-23{
-	background-image:url("assets/power2-Optimized.jpg") ;
+	background-image: url("assets/6.png");
 	background-repeat:no-repeat;
+	background-position: center;
+
+}
+
+#why-solar-211 {
+	background-image: url("assets/h.png");
+	background-repeat: no-repeat;
 	background-position:bottom;
-	
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	
+	-o-background-size: cover;
 	background-size: cover;
+}
+
+#why-solar-221 {
+	background-image: url("assets/i.png");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+
+	background-size: contain;
+}
+
+#why-solar-2201 {
+	background-image: url("assets/c.png");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+
+	background-size: contain;
 }
 #why-solar-211{
-	background-image:url("assets/H1.png") ;
+	background-image: url("assets/h.png");
 	background-repeat:no-repeat;
 	background-position:center;
-	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	
-	background-size: cover;
+
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+
+	background-size: contain;
 }
 #why-solar-222{
-	background-image:url("assets/H2.png") ;
+	background-image: url("assets/h2.png");
 	background-repeat:no-repeat;
 	background-position:center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+
+	background-size: contain;
 	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	
-	background-size: cover;
 }
 #why-solar-233{
-	background-image:url("assets/H3.png") ;
+	background-image: url("assets/h2.png");
 	background-repeat:no-repeat;
 	background-position:center;
-	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	
-	background-size: cover;
+
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+
+	background-size: contain;
+}
+
+#why-solar-234 {
+	background-image: url("assets/h2.png");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+
+	background-size: contain;
 }
 #why-solar-311{
 	background-image:url("assets/O1.png") ;
@@ -392,6 +443,7 @@ nav{
 .page6{
 	padding-top:4%;
 	font-size:32px;
+	margin-bottom: 0%;
 	font-weight:300;
 	font-family: 'Dosis', sans-serif;
 }
@@ -401,17 +453,28 @@ footer.page-footer {
   
 }
 
-.input-field label {
+.page-footer .input-field label {
     color: #FFF !IMPORTANT;
 }
-input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+
+.page-footer input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #fff !important;
 }
 
+.collapsible-body {
+	padding-left: 42px;
+}
 
+.pageFAQ {
+	margin-top: 10%;
 
+}
+
+#grl {
+	height: 650px;
+}
 
 
 

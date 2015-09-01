@@ -12,8 +12,13 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        ul li {
+            list-style-type: disc !important;
+        }
 
+    </style>
 
 </head>
 <body>
@@ -27,19 +32,19 @@
     <!--NAVIGATION BAR-->
     <div class="navbar-fixed">
         <nav class=" expand">
-            <div class="nav-wrapper">
-                <a href="{{ url_for('index') }}" class="brand-logo ">&nbsp;&nbsp;Solarify</a>
-                <ul class="right hide-on-med-and-down ">
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('calculator') }}">Calculator</a></li>
-                    <li><a href="#!">Installer</a></li>
-                    <li><a href="#!">Learn Solar</a></li>
-                    <li><a href="#!">Blog</a></li>
+            <div class="nav-wrapper ">
+                <a href="#" class="brand-logo ">&nbsp;&nbsp;Solarify</a>
+                <ul class=" right hide-on-med-and-down ">
+                    <li><a href="#!" class="grey-text text-darken-3 ">Home</a></li>
+                    <li><a href="#!" class="grey-text text-darken-3 ">Calculator</a></li>
+                    <li><a href="#!" class="grey-text text-darken-3 ">Installer</a></li>
+                    <li><a href="#!" class="grey-text text-darken-3 ">Learn Solar</a></li>
+                    <li><a href="#!" class="grey-text text-darken-3 ">Blog</a></li>
+
                 </ul>
-                <ul id="slide-out" class="side-nav">
-                    <li><a href="#"><span class="grey-text text-darken-3 ">Home</span></a></li>
-                    <li><a href="{{ url_for('calculator') }}"><span
-                            class="grey-text text-darken-3 ">Calculator</span></a></li>
+                <ul id="slide-out" class="side-nav ">
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Home</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Calculator</span></a></li>
                     <li><a href="#!"><span class="grey-text text-darken-3 ">Installer</span></a></li>
                     <li><a href="#!"><span class="grey-text text-darken-3 ">Learn Solar</span></a></li>
                     <li><a href="#!"><span class="grey-text text-darken-3 ">Blog</span></a></li>
@@ -51,12 +56,12 @@
 
     <!--NAVIGATION BAR ENDS-->
     <div class="container">
-        <div class="row page32">
+        <div class="row pageFAQ">
 
             <div class="col s12 m12">
 
                 <ul class="collapsible" data-collapsible="accordion">
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">What is rooftop solar PV solutions?</div>
                         <div class="collapsible-body">Photovoltaic system has electricity-generating solar panels
                             mounted on the rooftop of a
@@ -64,13 +69,13 @@
                             residential or commercial building or structure
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">How is it useful?</div>
                         <div class="collapsible-body">It generates power at your own space by utilizing un-used roof
                             space at a reasonable cost.
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Why should you use it?</div>
                         <div class="collapsible-body">Gain freedom from power cuts and exposure to unstable power
                             pricing
@@ -82,7 +87,7 @@
                             <br> Reduce dependency on grid power & diesel generators
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Benefits to local power economy?</div>
                         <div class="collapsible-body">Photovoltaic roof-top installations at the tail-end of the grid
                             can enhance grid-stability
@@ -96,7 +101,7 @@
                             <br> Good choice for distributed power generation system
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Key pre-requirements for rooftop solar setup</div>
                         <div class="collapsible-body">Need a shadow free area on the rooftop
 
@@ -104,8 +109,7 @@
 
                             <br> Approx 100-120 sqft is required for installing a 1kWp system
 
-                            <br> Ideally, the wiring b/w solar panel on the roof and inverter placed indoor shouldn&#8217;t
-                            be
+                            <br> Ideally, the wiring b/w solar panel on the roof and inverter placed indoor shouldn’t be
 
                             more than 20m to avoid DC losses
 
@@ -116,7 +120,7 @@
                             <br> Batteries need to be placed separately indoors
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">How does weather and local conditions affect performance?</div>
                         <div class="collapsible-body">Generation depends on local weather and other conditions like
                             temperature etc
@@ -131,7 +135,7 @@
                         </div>
                     </li>
 
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Government requirements.</div>
                         <div class="collapsible-body">For grid-tied systems, the local electrical authority will decide
                             to allow the installation
@@ -141,7 +145,7 @@
                             <br> Should be an existing consumer and regularly paying the bills
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Capital and operating costs.</div>
                         <div class="collapsible-body">
                             <table>
@@ -222,7 +226,7 @@
                             Solar usually is an upfront investment, maintenance is at a minimal.
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">How to select an installer</div>
                         <div class="collapsible-body">The cheapest quote might not necessarily provide the best quality
                             of equipment and
@@ -239,7 +243,7 @@
                             <br> Ask for certified products only from the installers
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Different kinds of solutions available?</div>
                         <div class="collapsible-body">Grid-tied: Here the solar energy generated during the day is
                             immediately consumed by the
@@ -274,7 +278,7 @@
                             solution for the loads
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Different components of a rooftop solar system</div>
                         <div class="collapsible-body">Solar PV panels : They work by converting sunlight into
                             electricity. They do not use the heat
@@ -307,7 +311,7 @@
                             electricity
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Lifetime of appliances -min/max</div>
                         <div class="collapsible-body">
                             <ul>
@@ -315,7 +319,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Lifetime of appliances -min/max</div>
                         <div class="collapsible-body">
                             <ul>
@@ -323,7 +327,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Lifetime of appliances -min/max</div>
                         <div class="collapsible-body">
                             <ul>
@@ -331,7 +335,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li style="list-style-type:none !important;">
                         <div class="collapsible-header">Lifetime of appliances -min/max</div>
                         <div class="collapsible-body">
                             <ul>
@@ -383,7 +387,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            &copy; 2015 <span class="brand-logo">Solarify</span>
+            © 2015 <span class="brand-logo">Solarify</span>
             <a class="grey-text text-lighten-4 right" href="#">Solar Designs</a>
         </div>
     </div>

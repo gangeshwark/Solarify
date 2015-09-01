@@ -12,8 +12,16 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        ul li {
+            list-style-type: disc !important;
+        }
 
+        #hover-div:hover {
+            background-color: rgba(25, 24, 21, 0.1);
+        }
+    </style>
 
 </head>
 <body>
@@ -21,27 +29,52 @@
 <!--CONTAINER STARTS-->
 
 <!--HOME PAGE-->
+<style>
+    .sidebar {
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+        position: fixed;
+        right: 0px;
+        top: 400px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        z-index: 200;
+        color: #fff;
+        font-weight: 600;
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Safari */
+        transform: rotate(90deg); /* Standard syntax */
+        transform-origin: right top 0;
+        text-align: center;
+    }
+
+    .sidebar a {
+        color: #fff;
+    }
+</style>
+<div class='teal sidebar'><a class="waves-effect waves-light  modal-trigger" href="#modal1">Free Quote</a></div>
 
 
 <div class="row  slide31 flow-text brown-text text-lighten-1">
+
     <!--NAVIGATION BAR-->
     <div class="navbar-fixed">
         <nav class=" expand">
-            <div class="nav-wrapper brown-text text-lighten-1">
-                <a href="{{ url_for('index') }}" class="brand-logo ">&nbsp;&nbsp;<img src="/static/logo.png" alt="Logo" height="72"
-                                                                 width="72"></a>
+            <div class="nav-wrapper brown-text text-lighten-1 " style="background-color: rgba(25, 24, 21, 0.1);">
+                <a href="#" class="brand-logo ">&nbsp;&nbsp;<img src="logo.png" alt="Logo" height="65" width="105"></a>
                 <ul class="right hide-on-med-and-down ">
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('calculator') }}">Calculator</a></li>
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!">Calculator</a></li>
                     <li><a href="#!">Installer</a></li>
                     <li><a href="#!">Learn Solar</a></li>
                     <li><a href="#!">Blog</a></li>
 
                 </ul>
                 <ul id="slide-out" class="side-nav">
-                    <li><a href="#"><span class="grey-text text-darken-3 ">Home</span></a></li>
-                    <li><a href="{{ url_for('calculator') }}"><span
-                            class="grey-text text-darken-3 ">Calculator</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Home</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Calculator</span></a></li>
                     <li><a href="#!"><span class="grey-text text-darken-3 ">Installer</span></a></li>
                     <li><a href="#!"><span class="grey-text text-darken-3 ">Learn Solar</span></a></li>
                     <li><a href="#!"><span class="grey-text text-darken-3 ">Blog</span></a></li>
@@ -55,20 +88,21 @@
     <div class="container ">
         <div class="row page31">
 
-            <div class="col s8 offset-s2 center"><span style="">Why solarify your Work Place?
+            <div class="col s12  center"><span style="">Why solarify your Work Place?
 						<ul style="font-size:18px;">
 
-                            <li>Solar power is cheaper than commercial
+                            <li style="list-style-type:none !important;">Solar power is cheaper than commercial
 
                                 grid rates.
                             </li>
 
-                            <li>Save 20% on monthly bills</li>
-                            <li>Claim depreciation tax benefits</li>
-                            <li>Make your office green</li>
+                            <li style="list-style-type:none !important;">Save 20% on monthly bills</li>
+                            <li style="list-style-type:none !important;">Claim depreciation tax benefits</li>
+                            <li style="list-style-type:none !important;">Make your office green</li>
 
                         </ul>
-						Be <span class="brand-logo" id="logo-hover">Solarified</span> today .</span>
+						
+						Be the first to go solar and lead the way to a greener future!
             </div>
             <div class="col s2"></div>
         </div>
@@ -93,75 +127,103 @@
 
 </div>
 
-<!--ABOUT PAGE-->
+
 <div class="row slide2 white flow-text">
     <div class="row page3">
 
-        <div class="col s8 offset-s2 center"><span>Why <span class="brand-logo orange-text text-lighten-2"
-                                                             style="font-size:37px;" id="logo-hover">Solarify</span> today</span><br><span
-                style="">Advantages of having </span><span style="font-weight:700;">Solar</span> for your <span
-                style="font-weight:700;">home. </span></div>
+        <div class="col s8 offset-s2 center"><br><span style=""></span><span class="teal-text">Market Trends</span>
+            <span class="teal-text"> </span></div>
+        <div class="col s2"></div>
+    </div>
+
+
+    <div class="row center">
+
+        <div class="col s12 m5   " style="margin-right:70px">
+            <div class="row center">
+
+                Solar vs Grid - Cost/Unit
+            </div>
+
+            <img src="grl.png" height="350px" width="120%"/>
+
+
+        </div>
+        <div class="col s12 m5   " style="margin-left:50px;">
+            <div class="row center" style="margin-bottom:44px">
+
+                % of Rooftop with Grid Parity
+            </div>
+
+            <img src="grb.png" height="350px" width="120%"/>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+<!--ABOUT PAGE-->
+<div class="row slide2 light-blue lighten-5  flow-text">
+    <div class="row page3">
+
+        <div class="col s8 offset-s2 center"><br><span style="">Advantages of having </span><span class="teal-text">Solar</span>
+            for your <span class="teal-text">home. </span></div>
         <div class="col s2"></div>
     </div>
 
 
     <div class="row page32">
+        <div class="container">
+            <!-- Page Content goes here -->
+            <div class="row ">
+                <div class="col  s12 m12 ">
 
-        <div class="col s12 m12">
-
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header">System - min/max</div>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>Last really long</li>
-                            <li>Safe and easy to operate</li>
-                            <li>Non-intrusive & installed quickly</li>
-                            <li>No moving parts, hence low maintenance</li>
-                            <li>Integrate into current electrical infrastructure</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Electricity - min/max</div>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>Get energy secure. Solar can deliver power during load shedding for your critical
-                                loads
-                            </li>
-                            <li>Generate power on your unused rooftop and earn significant savings</li>
-                            <li>Lock-in solar rates for a long time</li>
-                            <li>Get stable power output from solar</li>
-                            <li>Reduce grid-dependency</li>
-                            <li>Cost effective</li>
-
-
-                        </ul>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="collapsible-header">Lifetime of appliances -min/max</div>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>All expensive machinery is supplied with a very stable output power</li>
-                            <li>Stable power increases performance & lifetime of appliances</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Green solution -min/max</div>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>Environmentally beneficial way of generating power</li>
-                            <li>Contributes to green economy</li>
-                            <li>Zero emissions</li>
-
-
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li style="list-style-type:none !important;">
+                            <div class="collapsible-header teal-text">System - min/max</div>
+                            <div class="collapsible-body">
+                                <ul style="font-size:20px;">
+                                    <li>Last really long</li>
+                                    <li>Safe and easy to operate</li>
+                                    <li>Non-intrusive & installed quickly</li>
+                                    <li>Low maintenance</li>
+                                    <li>Integrate into current electrical infrastructure</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li style="list-style-type:none !important;">
+                            <div class="collapsible-header teal-text">Electricity - min/max</div>
+                            <div class="collapsible-body">
+                                <ul style="font-size:20px;">
+                                    <li>Get stable power o/p from solar</li>
+                                    <li>Lock-in solar rates for a long time</li>
+                                    <li>Generate your own power and earn significant savings</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li style="list-style-type:none !important;">
+                            <div class="collapsible-header teal-text">Lifetime of appliances -min/max</div>
+                            <div class="collapsible-body">
+                                <ul style="font-size:20px;">
+                                    <li>Stable power increases performance & lifetime of appliances</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li style="list-style-type:none !important;">
+                            <div class="collapsible-header teal-text">Green solution -min/max</div>
+                            <div class="collapsible-body">
+                                <ul style="font-size:20px;">
+                                    <li>Environmentally beneficial way of generating power</li>
+                                    <li>Contributes to green economy</li>
+                                    <li>Zero emissions</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
 
@@ -170,77 +232,124 @@
 
     <div class="row page5">
 
-        <div class="col s8 offset-s2 center"><span>Today solar is <span
-                style="font-weight:700;">Practical, Efficient</span> & <span style="font-weight:700;">Cheaper</span> solution to all your power needs.
-        </div>
+        <div class="col s8 offset-s2 center" style="font-size:24px;"><span>Today solar is <span class="teal-text"
+                                                                                                style="font-weight:700;">practical, efficient</span> & <span
+                class="teal-text" style="font-weight:700;">cheaper</span> solution to all your power needs.</span></div>
         <div class="col s2"></div>
     </div>
 
 </div>
-<div class="row  slide3 light-blue lighten-5 flow-text">
+<div class="row  slide3 white flow-text">
 
     <div class="row page6 blue-grey-text text-lighten-3 ">
 
         <div class="col s8 offset-s2 center black-text">Different types of rooftop connections</div>
         <div class="col s2"></div>
     </div>
+    <div class="container">
+        <div class="row page4 center">
+            <div class="col  m12 s12 center ">
 
-    <div class="row page4">
-        <div class="col m4 s12">
+                <div class="card-panel light-blue lighten-5 why-solar22" id="why-solar-2201"
+                     style="z-index:1;padding:0px;">
+                    <div id="hover-div" style="z-index:10;height:470px">
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col m4 s12 ">
 
-            <div class="card-panel  why-solar32" id="why-solar-311">
+                <div class="card-panel  why-solar22" id="why-solar-222">
+
+                </div>
+            </div>
+            <div class="col m4 s12">
+
+                <div class="card-panel  why-solar22" id="why-solar-233">
+
+                </div>
+            </div>-->
+
+
+        </div>
+    </div>
+    <div class="row page4"><p style="margin-left:98%;cursor:pointer;" class="red-text text-lighten-1" id="close">x</P>
+        <!--<div class="col offset-m3 m6 s12 center">
+
+            <div class="card-panel  why-solar22" id="why-solar-211">
 
             </div>
-        </div>
+        </div>-->
         <div class="col m4 s12 ">
 
-            <div class="card-panel  why-solar32" id="why-solar-322">
+            <div class="card-panel  why-solar22" id="why-solar-222" style="display:none">
 
             </div>
         </div>
         <div class="col m4 s12">
 
-            <div class="card-panel  why-solar32" id="why-solar-333">
+            <div class="card-panel  why-solar22" id="why-solar-233" style="display:none">
 
             </div>
         </div>
+        <div class="col m4 s12">
 
+            <div class="card-panel  why-solar22" id="why-solar-234" style="display:none">
+
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $("#close").click(function () {
+                    $("#why-solar-2201").show();
+                    $("#why-solar-222").toggle();
+                    $("#why-solar-233").toggle();
+                    $("#why-solar-234").toggle();
+                });
+                $("#why-solar-2201").click(function () {
+                    $("#why-solar-2201").hide();
+                    $("#why-solar-222").toggle();
+                    $("#why-solar-233").toggle();
+                    $("#why-solar-234").toggle();
+                });
+            });
+        </script>
 
     </div>
 </div>
 <!--IMPACT PAGE-->
-<div class="row  slide3 white flow-text">
+<div class="row  slide3 light-blue lighten-5  flow-text">
 
-    <div class="row page6 black-text ">
+    <div class="row page6 blue-grey-text text-lighten-3 ">
 
-        <div class="col s8 offset-s2 center">Pre-requirements.</div>
+        <div class="col s8 offset-s2 center black-text">Pre-requirements.</div>
         <div class="col s2"></div>
     </div>
 
     <div class="row page4">
         <div class="col m4 s12">
 
-            <div class="card-panel  why-solar2" id="why-solar-21">
-                <p class="white-text center title-impact">
-                    Roof
-                <ul style="color:#fff;font-size:24px; font-weight:600;">
+            <div class="card-panel   why-solar2" id="why-solar-21">
+
+                <p class="teal white-text center title-impact">
+                    Roof</p><br>
+
+                <p class="grey-text center title-impact">
+                <ul class="grey-text text-darken-1" style="font-size:20px">
                     <li>Approx. 100 sqft is
 
                         required for every 1kWp
 
                         system
                     </li>
+                    <li>A shadow free area is
+
+                        necessary, otherwise it will
+
+                        affect generation
+                    </li>
                     <li>A flat or sloped roof is
 
                         suitable
-                    </li>
-                    <li>Check whether weight of
-
-                        panels & mounting can be
-
-                        supported by roof
-
-                        structure
                     </li>
 
 
@@ -252,32 +361,21 @@
         <div class="col m4 s12 ">
 
             <div class="card-panel  why-solar2" id="why-solar-22">
-                <p class="white-text center title-impact">
-                    Mounting
-                <ul style="color:#fff;font-size:24px; font-weight:600;">
+
+                <p class="teal white-text center title-impact">
+                    Mounting</p><br>
+
+                <p class="grey-text center title-impact">
+                <ul class="grey-text text-darken-1" style="font-size:20px">
                     <li>Panels facing south
 
-                        direction at the right angle
-
-                        gives best results
+                        direction gives best results
                     </li>
                     <li>If installed in any other
 
                         direction, generation
 
                         reduces by 3-5%
-                    </li>
-                    <li>A shadow free area is
-
-                        necessary, otherwise it will
-
-                        affect generation
-                    </li>
-                    <li>Different mounting will be
-
-                        used based on roof
-
-                        structure
                     </li>
 
 
@@ -288,9 +386,11 @@
         <div class="col m4 s12">
 
             <div class="card-panel  why-solar2" id="why-solar-23">
-                <p class="white-text center title-impact">
-                    Power
-                <ul style="color:#fff;font-size:24px;font-weight:600;">
+                <p class="teal white-text center title-impact">
+                    Power</p><br>
+
+                <p class="grey-text center title-impact">
+                <ul class="grey-text text-darken-1" style="list-style-type:disc !important;font-size:21px; ">
                     <li>An inverter usually keeps
 
                         track of daily energy
@@ -302,10 +402,6 @@
                         at a maximum of 20m wire
 
                         length from the inverter
-                    </li>
-                    <li>Inverters and other meters
-
-                        should be placed indoors
                     </li>
 
 
@@ -323,7 +419,7 @@
 </div>
 
 <!--FOOTER-->
-<footer class="page-footer orange lighten-1">
+<footer class="page-footer red lighten-1">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
@@ -352,6 +448,8 @@
                         <input id="phone" type="tel" class="validate">
                         <label for="phone">Phone</label>
                     </div>
+
+                    <a class="waves-effect waves-light btn">Submit</a>
 
 
                 </form>
@@ -386,14 +484,14 @@
         $(window).scroll(function () {
             if ($(document).scrollTop() > 50) {
                 $('nav').addClass('shrink');
-                $('nav').addClass('orange lighten-2');
+                $('nav').addClass('red lighten-1');
 
                 $('.lime-text').removeClass('nav-link');
             } else {
 
                 $('nav').addClass('expand');
                 $('nav').removeClass('shrink');
-                $('nav').removeClass('orange lighten-2');
+                $('nav').removeClass('red lighten-1');
                 $('.lime-text').addClass('nav-link');
             }
 

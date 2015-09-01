@@ -1,6 +1,8 @@
-from flask import Flask, render_template, jsonify
 import math
+
+from flask import Flask, render_template, jsonify
 import numpy
+
 from utils import lt2a, lt3, ht2b, ht2a, ht4
 
 application = Flask(__name__)
@@ -173,6 +175,16 @@ def calculate():
 @application.route('/calculator')
 def calculator():
     return render_template('calculator.html')
+
+
+@application.route('/results')
+def results():
+    return render_template('results.html')
+
+
+@application.route('/contact', methods=['POST'])
+def contact():
+    return render_template('faq.html')
 
 
 if __name__ == '__main__':

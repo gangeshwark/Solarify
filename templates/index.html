@@ -11,9 +11,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-
+    <script src="/static/Chart.js"></script>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        ul li {
+            list-style-type: disc !important;
+        }
 
+    </style>
 
 </head>
 <body>
@@ -21,77 +26,111 @@
 <!--CONTAINER STARTS-->
 
 <!--HOME PAGE-->
+<style>
+    .sidebar {
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+        position: fixed;
+        right: 0px;
+        top: 400px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        z-index: 200;
+        color: #fff;
+        font-weight: 600;
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Safari */
+        transform: rotate(90deg); /* Standard syntax */
+        transform-origin: right top 0;
+        text-align: center;
+    }
+
+    .sidebar a {
+        color: #fff;
+    }
+</style>
+<div class='teal sidebar'><a class="waves-effect waves-light  modal-trigger" href="#modal1">Free Quote</a></div>
 
 
 <div class="row  slide1 flow-text">
-    <!--NAVIGATION BAR-->
-    <div class="navbar-fixed  ">
-        <nav class=" expand">
-            <div class="nav-wrapper ">
-                <a href="{{ url_for('index') }}" class="brand-logo ">&nbsp;&nbsp;<img src="/static/logo.png" alt="Logo" height="65"
-                                                                          width="102"></a>
-                <ul class="right hide-on-med-and-down ">
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('calculator') }}">Calculator</a></li>
-                    <li><a href="#!">Installer</a></li>
-                    <li><a href="#!">Learn Solar</a></li>
-                    <li><a href="#!">Blog</a></li>
+    <div style="background-color: rgba(25, 24, 21, 0.3);">
+        <!--NAVIGATION BAR-->
+        <div class="navbar-fixed  ">
+            <nav class=" expand">
+                <div class="nav-wrapper ">
+                    <a href="{{ url_for('index') }}" class="brand-logo ">&nbsp;&nbsp;<img src="/static/logo.png"
+                                                                                          alt="Logo" height="65"
+                                                                                          width="102"><img
+                            src="/static/text.png" alt="Logo"
+                            height="55" width="120"></a>
+                    <ul class="right hide-on-med-and-down ">
+                        <li><a href="#!">Home</a></li>
+                        <li><a href="#!">Calculator</a></li>
+                        <li><a href="#!">Installer</a></li>
+                        <li><a href="#!">Learn Solar</a></li>
+                        <li><a href="#!">Blog</a></li>
 
-                </ul>
-                <ul id="slide-out" class="side-nav">
-                    <li><a href="#"><span class="grey-text text-darken-3 ">Home</span></a></li>
-                    <li><a href="{{ url_for('calculator') }}"><span
-                            class="grey-text text-darken-3 ">Calculator</span></a></li>
-                    <li><a href="#!"><span class="grey-text text-darken-3 ">Installer</span></a></li>
-                    <li><a href="#!"><span class="grey-text text-darken-3 ">Learn Solar</span></a></li>
-                    <li><a href="#!"><span class="grey-text text-darken-3 ">Blog</span></a></li>
-                </ul>
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-            </div>
-        </nav>
-    </div>
-
-    <!--NAVIGATION BAR ENDS-->
-    <div class="container">
-        <div class="row page1">
-
-            <div class="col s8 offset-s2 center"><span class="white-text" style="text-shadow: 2px 2px #000;">Utilize your rooftop for Power Gains<br>Be <span
-                    class="brand-logo" id="logo-hover">Solarified</span> today .</span></div>
-            <div class="col s2"></div>
+                    </ul>
+                    <ul id="slide-out" class="side-nav">
+                        <li><a href="#!"><span class="grey-text text-darken-3 ">Home</span></a></li>
+                        <li><a href="#!"><span class="grey-text text-darken-3 ">Calculator</span></a></li>
+                        <li><a href="#!"><span class="grey-text text-darken-3 ">Installer</span></a></li>
+                        <li><a href="#!"><span class="grey-text text-darken-3 ">Learn Solar</span></a></li>
+                        <li><a href="#!"><span class="grey-text text-darken-3 ">Blog</span></a></li>
+                    </ul>
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i
+                            class="mdi-navigation-menu"></i></a>
+                </div>
+            </nav>
         </div>
-        <div class="row page2">
 
-            <div class="col s8 offset-s2 center"><span style="color:#fff;text-shadow: 2px 2px #000;">Are you looking for <!-- Dropdown Trigger --></span>
-                <a class='dropdown-button waves-effect waves-light btn orange lighten-2' href='#'
-                   data-activates='dropdown1'>Select One</a>
+        <!--NAVIGATION BAR ENDS-->
+        <div class="container">
+            <div class="row page1">
 
-                <!-- Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="{{ url_for('residential') }}" class="waves-effect waves-light"><span
-                            class="orange-text text-lighten-2 ">House</span></a></li>
-                    <li><a href="{{ url_for('commercial') }}" class="waves-effect waves-light"><span
-                            class="orange-text text-lighten-2 ">School</span></a></li>
-                    <li><a href="{{ url_for('commercial') }}" class="waves-effect waves-light"><span
-                            class="orange-text text-lighten-2 ">Hospital</span></a></li>
-                    <li><a href="{{ url_for('industrial') }}" class="waves-effect waves-light"><span
-                            class="orange-text text-lighten-2 ">Factory</span></a></li>
-                    <li><a href="{{ url_for('commercial') }}" class="waves-effect waves-light"><span
-                            class="orange-text text-lighten-2 ">Office</span></a></li>
-                </ul>
+                <div class="col s8 offset-s2 center"><span class="white-text"
+                                                           style="text-shadow: 2px 2px #000;">Be <span
+                        class="brand-logo" id="logo-hover">Solarified</span> today<br>Utilize your rooftop for Power Gains .</span>
+                </div>
+                <div class="col s2"></div>
             </div>
-            <div class="col s2"></div>
+            <div class="row page2">
+
+                <div class="col s8 offset-s2 center"><span style="color:#fff;text-shadow: 2px 2px #000;">Ready to turn your  <!-- Dropdown Trigger --></span>
+                    <a class='dropdown-button waves-effect waves-light btn teal lighten-2' href='#'
+                       data-activates='dropdown1'>Select One</a>
+
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="{{ url_for('residential') }}" class="waves-effect waves-light"><span
+                                class="teal-text  ">House</span></a></li>
+                        <li><a href="{{ url_for('commercial') }}" class="waves-effect waves-light"><span
+                                class="teal-text ">School</span></a></li>
+                        <li><a href="{{ url_for('commercial') }}" class="waves-effect waves-light"><span
+                                class="teal-text  ">Hospital</span></a>
+                        </li>
+                        <li><a href="{{ url_for('industrial') }}" class="waves-effect waves-light"><span
+                                class="teal-text  ">Factory</span></a></li>
+                        <li><a href="{{ url_for('commercial') }}" class="waves-effect waves-light"><span
+                                class="teal-text  ">Office</span></a></li>
+                    </ul>
+                    <span style="color:#fff;text-shadow: 2px 2px #000;">energy efficient ?	</span>
+                </div>
+                <div class="col s2"></div>
+            </div>
         </div>
+
+
     </div>
-
-
 </div>
-
 <!--ABOUT PAGE-->
 <div class="row slide2 white flow-text">
     <div class="row page3">
 
-        <div class="col s8 offset-s2 center"><span>Why <span class="brand-logo orange-text text-lighten-2"
-                                                             style="font-size:37px;" id="logo-hover">Solarify</span> today</span><br><span
+        <div class="col s8 offset-s2 center"><span>Why go <span class="brand-logo teal-text " style="font-size:37px;"
+                                                                id="logo-hover"> Solar </span> today?</span><br><span
                 style="">Protect yourself from </span><span style="font-weight:700;">Utility Rates</span> & <span
                 style="font-weight:700;">Oil Price hikes</span></div>
         <div class="col s2"></div>
@@ -101,59 +140,59 @@
     <div class="row page32">
 
         <div class="col s12 m4 center ">
-            <div class="orange-text text-lighten-2 circle"><i class="fa fa-inr"></i></div>
+
+            <div class="btn-floating btn-large waves-effect waves-light teal white-text"><i class="fa fa-inr"></i></div>
+
             <p class="page4-sec-out center">Cost</p>
 
-            <div class="col s10 offset-s1 ">
-                Solar:<a class="tooltipped page4-desc-li" data-position="top" data-delay="50"
-                         data-tooltip="I am the best !"> Rs. 2/unit</a><br>
-                Grid:<a class="tooltipped page4-desc-li" data-position="right" data-delay="50"
-                        data-tooltip="I am expensive !"> Rs. 20/unit</a><br>
-                Diesel:<a class="tooltipped page4-desc-li" data-position="bottom" data-delay="50"
-                          data-tooltip="I am expensive !"> Rs. 50/unit</a>
+            <div class="row page4-desc">
+                <div class="col s10 offset-s1 ">
+                    Solar:<a class="tooltipped page4-desc-li" data-position="top" data-delay="50"
+                             data-tooltip="I am the best !">&nbsp;&nbsp; Rs. 2/unit</a><br>
+                    Grid:<a class="tooltipped page4-desc-li" data-position="right" data-delay="50"
+                            data-tooltip="I am expensive !">&nbsp;&nbsp; Rs. 20/unit</a><br>
+                    Diesel:<a class="tooltipped page4-desc-li" data-position="bottom" data-delay="50"
+                              data-tooltip="I am expensive !">&nbsp;&nbsp; Rs. 50/unit</a>
+                </div>
             </div>
         </div>
 
-        <div class="col s12 m4 center ">
-            <div class="orange-text text-lighten-2 circle"><i class="fa fa-paw"></i></div>
+
+        <div class="col s12  m4 center ">
+            <div>
+                <canvas id="canvas" height="350" width="600"></canvas>
+            </div>
+        </div>
+        <div class="col s12  m4 center ">
+            <div class="btn-floating btn-large waves-effect waves-light teal white-text"><i class="fa fa-paw"></i></div>
+
             <p class="page4-sec-out center">Returns</p>
 
             <div class="row page4-desc">
                 <div class="col s10 offset-s1 ">
                     Residence:<a class="tooltipped page4-desc-li" data-position="top" data-delay="50"
-                                 data-tooltip="I am the best !"> 30% p.a.</a><br>
+                                 data-tooltip="I am the best !">&nbsp;&nbsp; 30% p.a.</a><br>
                     Office:<a class="tooltipped page4-desc-li" data-position="right" data-delay="50"
-                              data-tooltip="I am expensive !"> 40% p.a.</a><br>
+                              data-tooltip="I am expensive !">&nbsp;&nbsp; 40% p.a.</a><br>
                     Factory:<a class="tooltipped page4-desc-li" data-position="bottom" data-delay="50"
-                               data-tooltip="I am expensive !"> 70% p.a.</a>
-                </div>
-                <div class="col s1 "></div>
-            </div>
-        </div>
-        <div class="col s12 m4 center ">
-            <div class="orange-text text-lighten-2 circle"><i class="fa fa-diamond"></i></div>
-            <p class="page4-sec-out center">Benefits</p>
-
-            <div class="row page4-desc">
-                <div class="col s10 offset-s1 ">
-                    Residential:<a class="tooltipped page4-desc-li" data-position="top" data-delay="50"
-                                   data-tooltip="I am the best !"> 30% p.a.</a><br>
-                    Commercial:<a class="tooltipped page4-desc-li" data-position="right" data-delay="50"
-                                  data-tooltip="I am expensive !"> 80% p.a.</a><br>
-                    Factory:<a class="tooltipped page4-desc-li" data-position="bottom" data-delay="50"
-                               data-tooltip="I am expensive !"> 70% p.a.</a>
+                               data-tooltip="I am expensive !">&nbsp;&nbsp; 70% p.a.</a>
                 </div>
                 <div class="col s1 "></div>
             </div>
         </div>
     </div>
-
+    <div class="row page4-5">
+        <div class="col s12  center" style="font-size:24px;"><span><strong>Depreciation Benefits :</strong> Also if you a commercial entity, then save <span
+                class="teal-text" style="font-weight:700;">80 % </span> on taxable income.</div>
+    </div>
 
     <div class="row page5">
 
-        <div class="col s8 offset-s2 center"><span>Today solar is <span
-                style="font-weight:700;">Practical, Efficient</span> & <span style="font-weight:700;">Cheaper</span> solution to all your power needs.
-        </div>
+        <div class="col s8 offset-s2 center" style="font-size:24px;"><span>Today solar is <span class="teal-text"
+                                                                                                style="font-weight:700;">practical, efficient</span> & <span
+                class="teal-text" style="font-weight:700;">cheaper</span> solution to all your power needs.</span></div>
+        <div class="col s12  center" style="font-size:24px;margin-top:20px;"><span>Want significant Savings  <a
+                class="waves-effect waves-light btn">Solarify</a></div>
         <div class="col s2"></div>
     </div>
 
@@ -163,7 +202,7 @@
 
     <div class="row page6 grey-text text-darken-4 ">
 
-        <div class="col s8 offset-s2 center"><span>Impact of <span class="orange-text text-lighten-2"
+        <div class="col s8 offset-s2 center"><span>Impact of <span class="teal-text "
                                                                    style="font-weight:800">Solar</span> power</span>
         </div>
         <div class="col s2"></div>
@@ -172,29 +211,70 @@
     <div class="row page4">
         <div class="col m4 s12">
 
-            <div class="card-panel  why-solar" id="why-solar-1">
-                <p class="white-text center title-impact">
-                    Environment
 
-                </p>
+            <div class="card-panel  why-solar" id="why-solar-1">
+                <p class="teal white-text center title-impact">
+
+                    Environmental Benefit:</p>
+
+                <div style="padding-left:40px;">
+                    <p class="grey-text text-darken-1">
+                        <br>
+                        A 1kW system can:
+                    <ul class="grey-text text-darken-1">
+                        <li>Offset 10000 kgs of CO2</li>
+                        <li>Generates 1500 units per year</li>
+                        <li>Saves 1000L of diesel</li>
+                    </ul>
+                    </p>
+                </div>
             </div>
         </div>
+
         <div class="col m4 s12 ">
 
-            <div class="card-panel  why-solar" id="why-solar-2">
-                <p class="white-text center title-impact">
-                    Bills
 
-                </p>
+            <div class="card-panel  why-solar" id="why-solar-2">
+                <p class="teal white-text center title-impact">
+                    Reduce Utility Burden:</p>
+
+                <div style="padding-left:40px;">
+                    <p class="grey-text center title-impact">
+                        <BR>
+                    <ul class="grey-text text-darken-1">
+                        <li>Helps your neighborhood utility by reducing
+                            the excessive demand from the grid
+                        </li>
+                        <li>If 5% of rooftops go solar,
+                            burden on utilities reduce by 25%
+                        </li>
+                    </ul>
+
+                    </p>
+                </div>
             </div>
         </div>
         <div class="col m4 s12">
 
             <div class="card-panel  why-solar" id="why-solar-3">
-                <p class="white-text center title-impact">
-                    Power
+                <p class="teal white-text center title-impact">
+                    India- a solar superpower:</p>
 
-                </p>
+                <div style="padding-left:40px;">
+                    <p class="grey-text center title-impact">
+                        <br>
+                    <ul class="grey-text text-darken-1">
+                        <li>India which has currently 5% energy generated via solar
+                            of the total generation, is set to increase
+                            the share of solar to 20% by 2020
+                        </li>
+                        <li>This reduces power deficit hence millions of
+                            people have access to more energy
+                        </li>
+                    </ul>
+
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -204,9 +284,9 @@
 <!--CALCULATOR PAGE-->
 <div class="row  slide4">
 
-    <div class="row page6 grey-text text-darken-4 ">
+    <div class="row page6  ">
 
-        <div class="col s8 offset-s2 center"><span><span class="orange-text text-lighten-2" style="font-weight:800">Tools</span> </span>
+        <div class="col s8 offset-s2 center"><span><span class="teal-text " style="font-weight:800">Tools</span> </span>
         </div>
         <div class="col s2"></div>
     </div>
@@ -214,7 +294,7 @@
     <div class="row page32">
 
         <div class="col s12 m4 center ">
-            <div class="orange-text text-lighten-2 circle"><i class="fa fa-calculator"></i></div>
+            <div class="teal-text circle"><i class="fa fa-calculator"></i></div>
             <p class="page42-sec-out center">Caculate your requirements and Savings</p>
 
             <div class="row page4-desc ">
@@ -223,7 +303,7 @@
         </div>
 
         <div class="col s12 m4 center ">
-            <div class="orange-text text-lighten-2 circle"><i class="fa fa-file-text-o"></i></div>
+            <div class="teal-text circle"><i class="fa fa-file-text-o"></i></div>
             <p class="page42-sec-out center">Get a Free Quote</p>
 
             <div class="row page4-desc">
@@ -233,7 +313,7 @@
             </div>
         </div>
         <div class="col s12 m4 center ">
-            <div class="orange-text text-lighten-2 circle"><i class="fa fa-wrench"></i></div>
+            <div class="teal-text  circle"><i class="fa fa-wrench"></i></div>
             <p class="page42-sec-out center">Select a friendly reputed installer</p>
 
             <div class="row page4-desc">
@@ -245,55 +325,58 @@
 </div>
 
 <!--FOOTER-->
-<footer class="page-footer orange lighten-1">
+<footer class="page-footer red lighten-1 style="
+">
+
+<div class="row">
+    <div class="col m6 s12">
+        <h5 class="white-text brand-logo">Solarify</h5>
+
+        <p class="grey-text text-lighten-4">Practical, Efficient & Cheaper solution to all your power needs.</p>
+    </div>
+    <div class="col m3 s12">
+        <h5 class="white-text">Want to know more?
+            <br> We will call you.</h5>
+
+        <form class="col s12">
+
+            <div class="input-field col s12">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">Name</label>
+            </div>
+
+
+            <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="phone" type="tel" class="validate">
+                <label for="phone">Phone</label>
+            </div>
+
+            <a class="waves-effect waves-light btn">Submit</a>
+
+
+        </form>
+    </div>
+</div>
+
+<div class="footer-copyright">
     <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text brand-logo">Solarify</h5>
-
-                <p class="grey-text text-lighten-4">Practical, Efficient & Cheaper solution to all your power needs.</p>
-            </div>
-            <div class="col l4 offset-l0 s12">
-                <h5 class="white-text">Want to know more?
-                    <br> We will call you.</h5>
-
-                <form class="col s12">
-
-                    <div class="input-field col s12">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">Name</label>
-                    </div>
-
-
-                    <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-
-                    <div class="input-field col s12">
-                        <input id="phone" type="tel" class="validate">
-                        <label for="phone">Phone</label>
-                    </div>
-
-
-                </form>
-            </div>
-        </div>
+        &copy; 2015 <span class="brand-logo">Solarify</span>
+        <a class="grey-text text-lighten-4 right" href="#">Solar Designs</a>
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-            &copy; 2015 <span class="brand-logo">Solarify</span>
-            <a class="grey-text text-lighten-4 right" href="#">Solar Designs</a>
-        </div>
-    </div>
+</div>
 </footer>
 <!--POPUP -->
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
-    <div class="modal-content orange lighten-1">
+    <div class="modal-content red lighten-1">
         <h4><span class="white-text">Fill in the details</span></h4>
 
-        <form class="col s12">
+        <form class="col s12 red-text lighten-1-text" style="margin-top:4%;">
 
             <div class="input-field col s12">
                 <input id="first_name" type="text" class="validate">
@@ -315,11 +398,74 @@
         </form>
     </div>
     <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
     </div>
 </div>
 <!--CONTAINER ENDS-->
 </body>
+<script>
+    var randomScalingFactor = function () {
+        return Math.round(Math.random() * 100)
+    };
+    var lineChartData = {
+        labels: ["2012", "2014", "2016", "2018", "2020"],
+        datasets: [
+            {
+
+                datasetStrokeWidth: 50,
+
+                fillColor: "rgba(220,220,220,0.2)",
+                strokeColor: "rgba(239, 154, 154, 0.78)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                bezierCurve: true,
+                bezierCurveTension: 0.4,
+                datasetFill: false,
+                data: [3, 4.5, 7, 9, 12.5]
+            },
+            {
+
+                fillColor: "rgba(151,187,205,0.2)",
+                strokeColor: "rgba(128, 203, 196, 0.78)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                datasetFill: false,
+                data: [10, 13, 16, 19, 23]
+            },
+            {
+
+                fillColor: "rgba(151,187,205,0.2)",
+                strokeColor: "rgba(255, 204, 128, 0.78)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                datasetFill: false,
+                data: [15, 11.4, 9, 7, 5.5]
+            }
+        ]
+
+    }
+
+    window.onload = function () {
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myLine = new Chart(ctx).Line(lineChartData, {
+            responsive: true,
+            scaleShowGridLines: false,
+            datasetFill: false,
+            datasetStrokeWidth: 20,
+            pointDot: false,
+            datasetStroke: false,
+
+        });
+    }
+
+
+</script>
 <script>
     $(document).ready(function () {
         //NAVBAR
@@ -340,14 +486,14 @@
         $(window).scroll(function () {
             if ($(document).scrollTop() > 50) {
                 $('nav').addClass('shrink');
-                $('nav').addClass('orange lighten-2');
+                $('nav').addClass('red lighten-1');
 
                 $('.lime-text').removeClass('nav-link');
             } else {
 
                 $('nav').addClass('expand');
                 $('nav').removeClass('shrink');
-                $('nav').removeClass('orange lighten-2');
+                $('nav').removeClass('red lighten-1');
                 $('.lime-text').addClass('nav-link');
             }
 

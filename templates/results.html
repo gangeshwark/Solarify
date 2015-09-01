@@ -1,0 +1,319 @@
+<html>
+<head>
+    <!-- Latest compiled and minified Jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified Jquery UI-->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Dosis|Droid+Sans|Lobster' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+
+<!--CONTAINER STARTS-->
+
+<!--HOME PAGE-->
+
+
+<div class="row  slide1 flow-text">
+    <!--NAVIGATION BAR-->
+    <div class="navbar-fixed  ">
+        <nav class=" expand">
+            <div class="nav-wrapper ">
+                <a href="index.html" class="brand-logo ">&nbsp;&nbsp;<img src="logo.png" alt="Logo" height="65"
+                                                                          width="102"></a>
+                <ul class="right hide-on-med-and-down ">
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!">Calculator</a></li>
+                    <li><a href="#!">Installer</a></li>
+                    <li><a href="#!">Learn Solar</a></li>
+                    <li><a href="#!">Blog</a></li>
+
+                </ul>
+                <ul id="slide-out" class="side-nav">
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Home</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Calculator</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Installer</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Learn Solar</span></a></li>
+                    <li><a href="#!"><span class="grey-text text-darken-3 ">Blog</span></a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </nav>
+    </div>
+
+    <!--NAVIGATION BAR ENDS-->
+    <div class="container">
+        <div class="row page1-cal">
+
+            <div class="col s8 offset-s2 center" id="set-1">
+                <p class="white-text" style="text-shadow: 2px 2px #000;">
+                    Which City are you from?
+
+                </p>
+
+                <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="Bangalore">Bangalore</option>
+
+
+                    </select>
+                    <label>Select One</label>
+                </div>
+                <p class="white-text" style="text-shadow: 2px 2px #000;">
+                    What kind of customer are you?
+
+                </p>
+
+                <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="R">Residential</option>
+                        <option value="C">Commercial</option>
+                        <option value="I">Industrial</option>
+                    </select>
+                    <label>Select One</label>
+                </div>
+
+                <a class="waves-effect waves-light btn" id="button-1">Next</a>
+            </div>
+
+
+            <div class="col s8 offset-s2 center" id="set-2">
+                <p class="white-text" style="text-shadow: 2px 2px #000;">
+                    What is your rooftop area?
+
+                </p>
+
+                <div class="input-field col s12">
+                    <input id="area" type="number" class="validate">
+                    <label for="area">Not Less than 100 Sq Ft</label>
+                </div>
+                <p class="white-text" style="text-shadow: 2px 2px #000;">
+                    What kind of connection you have?
+
+                </p>
+
+                <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="HT">HT</option>
+                        <option value="LT">LT</option>
+
+                    </select>
+                    <label>Select One</label>
+                </div>
+                <a class="waves-effect waves-light btn" id="button-2">Next</a>
+            </div>
+
+
+            <div class="col s8 offset-s2 center" id="set-3">
+                <p class="white-text" style="text-shadow: 2px 2px #000;">
+                    What is your typical monthly bill?
+
+                </p>
+
+                <div class="input-field col s12">
+                    <input id="bill" type="number" class="validate">
+                    <label for="bill">Not Less than Rs. 300</label>
+                </div>
+                <p class="white-text" style="text-shadow: 2px 2px #000;">
+                    What is your sanctioned load?
+
+                </p>
+
+                <div class="input-field col s12">
+                    <input id="load" type="number" class="validate">
+                    <label for="load">Not Less than 1 KVA</label>
+                </div>
+                <a class="waves-effect waves-light btn" id="button-3">Submit</a>
+            </div>
+            <div class="col s2"></div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<!--FOOTER-->
+<footer class="page-footer orange lighten-1">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text brand-logo">Solarify</h5>
+
+                <p class="grey-text text-lighten-4">Practical, Efficient & Cheaper solution to all your power needs.</p>
+            </div>
+            <div class="col l4 offset-l0 s12">
+                <h5 class="white-text">Want to know more?
+                    <br> We will call you.</h5>
+
+                <form class="col s12">
+
+                    <div class="input-field col s12">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">Name</label>
+                    </div>
+
+
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input id="phone" type="tel" class="validate">
+                        <label for="phone">Phone</label>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; 2015 <span class="brand-logo">Solarify</span>
+            <a class="grey-text text-lighten-4 right" href="#">Solar Designs</a>
+        </div>
+    </div>
+</footer>
+<!--POPUP -->
+
+<!--CONTAINER ENDS-->
+</body>
+<script>
+    $(document).ready(function () {
+        //NAVBAR
+        $(".button-collapse").sideNav();
+        $('select').material_select();
+        $('.modal-trigger').leanModal();
+        $('.dropdown-button').dropdown({
+                    inDuration: 300,
+                    outDuration: 225,
+                    constrain_width: true, // Does not change width of dropdown to that of the activator
+                    hover: false, // Activate on hover
+                    gutter: 0, // Spacing from edge
+                    belowOrigin: false // Displays dropdown below the button
+                }
+        );
+        var flag = 0;
+        $("#area").keyup(function () {
+            var area = $('#area').val();
+            if (area < 100) {
+                flag = 1;
+                $('#area').removeClass("valid");
+                $('#area').addClass("invalid");
+            }
+            else {
+                flag = 0;
+
+            }
+            console.log(area);
+        });
+        $("#load").keyup(function () {
+            var load = $('#load').val();
+            if (load < 1) {
+                flag = 1;
+                $('#load').removeClass("valid");
+                $('#load').addClass("invalid");
+            }
+            else {
+                flag = 0;
+            }
+            console.log(load);
+        });
+        $("#bill").keyup(function () {
+            var bill = $('#bill').val();
+            if (area < 300) {
+                flag = 1;
+                $('#bill').removeClass("valid");
+                $('#bill').addClass("invalid");
+            }
+            else {
+                flag = 0;
+            }
+            console.log(bill);
+        });
+        $("#set-1").show();
+        $("#set-2").hide();
+        $("#set-3").hide();
+        $("#set-4").hide();
+        $("#button-1").click(function () {
+
+
+            $("#set-2").show();
+            $("#set-1").hide();
+
+        });
+        $("#button-2").click(function () {
+            if (!flag) {
+                $("#set-3").show();
+                $("#set-2").hide();
+            }
+        });
+        $("#button-3").click(function () {
+            $("#set-4").show();
+            $("#set-2").hide();
+        });
+
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('nav').addClass('shrink');
+                $('nav').addClass('orange lighten-2');
+
+                $('.lime-text').removeClass('nav-link');
+            } else {
+
+                $('nav').addClass('expand');
+                $('nav').removeClass('shrink');
+                $('nav').removeClass('orange lighten-2');
+                $('.lime-text').addClass('nav-link');
+            }
+
+
+            if ($(document).scrollTop() > 1020) {
+                $('.why-solar').slideDown(1000);
+
+            } else {
+
+
+                $('.why-solar').slideUp(1000);
+            }
+        });
+
+
+    });
+    if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+    window.onmousewheel = document.onmousewheel = wheel;
+
+    function wheel(event) {
+        var delta = 0;
+        if (event.wheelDelta) delta = event.wheelDelta / 120;
+        else if (event.detail) delta = -event.detail / 3;
+
+        handle(delta);
+        if (event.preventDefault) event.preventDefault();
+        event.returnValue = false;
+    }
+
+    function handle(delta) {
+        var time = 1000;
+        var distance = 300;
+
+        $('html, body').stop().animate({
+            scrollTop: $(window).scrollTop() - (distance * delta)
+        }, time);
+    }
+</script>
+</html>
